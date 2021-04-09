@@ -4,6 +4,10 @@
   background: $--white;
   border-bottom: 5px solid rgba($--white, .25);
 
+  .nuxt-link-active {
+    color: $--main-darker;
+  }
+
   &__wrapper {
     @extend %display-flex;
     justify-content: center;

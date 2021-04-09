@@ -3,7 +3,8 @@
     button.mobile-menu__btn(@click="isMenuActive = !isMenuActive") mobile-btn
     nav.mobile-menu__nav
       app-logo
-      button.mobile-menu__btn-close(@click="isMenuActive = !isMenuActive") close
+      button.mobile-menu__btn-close(@click="isMenuActive = !isMenuActive")
+        span ×
       ul.mobile-menu__list
         li(v-for='(link,index) in links' :key="index")
           nuxt-link.mobile-menu__link(:to="link.path" exact) {{link.name}}

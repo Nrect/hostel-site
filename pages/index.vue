@@ -1,7 +1,7 @@
 <template lang="pug">
   .homepage
-    app-intro
-    div 123
+    .container
+      div 123
 </template>
 
 <script>
