@@ -47,5 +47,13 @@ export default {
   modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+    postcss: {
+      preset: {
+        autoprefixer: {
+          overrideBrowserslist: ['last 3 versions', '> 1%']
+        }
+      }
+    }
+  }
 }

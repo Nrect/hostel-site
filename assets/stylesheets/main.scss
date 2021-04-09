@@ -12,8 +12,12 @@
 
 // Layout-related sections
 @import 'layout/header',
+'layout/header-nav',
+'layout/mobile-menu',
 'layout/footer';
 
 // Components
-@import 'components/button';
+@import 'components/intro',
+'components/logo',
+'components/button';
 

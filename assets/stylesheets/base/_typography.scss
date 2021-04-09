@@ -1,7 +1,12 @@
-/**
- * Basic typography style for copy text
- */
-//body {
-//  color: $text-color;
-//  font: normal 125% / 1.4 $text-font-stack;
-//}
+body {
+  color: $--black-text;
+  font-size: 16px;
+}
+
+a {
+  color: $--black-text;
+
+  &:hover {
+    color: $--main-darker;
+  }
+}

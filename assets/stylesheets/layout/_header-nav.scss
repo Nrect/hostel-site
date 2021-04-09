@@ -1,0 +1,30 @@
+.header-nav {
+  padding: 0 15px;
+
+  background: $--white;
+  border-bottom: 5px solid rgba($--white, .25);
+
+  &__wrapper {
+    @extend %display-flex;
+    justify-content: center;
+  }
+
+  &__list {
+    margin: 25px auto;
+    @extend %display-flex;
+  }
+
+  &__link {
+    padding: 0 28px;
+    display: block;
+
+    font-size: 18px;
+    transition: all 0.3s;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header-nav {
+    display: none;
+  }
+}
