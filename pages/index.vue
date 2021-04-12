@@ -1,14 +1,17 @@
 <template lang="pug">
   .homepage
-    .container
-      div 123
+    app-rooms-section
 </template>
 
 <script>
 import AppIntro from '~/components/Intro'
+import AppRoomsSection from '~/components/index/RoomsSection'
 
 export default {
-  components: { AppIntro },
+  components: {
+    AppRoomsSection,
+    AppIntro
+  },
   layout: 'main'
 }
 </script>

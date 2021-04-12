@@ -6,6 +6,11 @@
   flex-direction: column;
 }
 
+.title {
+  display: block;
+  text-align: center;
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 960px;

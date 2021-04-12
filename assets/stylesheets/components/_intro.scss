@@ -6,6 +6,10 @@
     .intro__subtitle {
       display: block;
     }
+
+    .intro__title {
+      padding-bottom: 20px;
+    }
   }
 
   width: 100%;
@@ -56,13 +60,25 @@
   }
 
   &__title {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 200px;
     text-transform: uppercase;
   }
 
   &__subtitle {
     font-size: 20px;
     display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .intro {
+    &__content{
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    &__title {
+      padding-top: 0;
+      text-transform: uppercase;
+    }
   }
 }
