@@ -27,3 +27,120 @@
     }
   }
 }
+
+// TODO: Переместить в отельный файл
+.card-slider {
+  height: auto !important;
+
+  &__slide {
+    //flex-basis: 33%;
+  }
+}
+
+.room-card {
+  margin-right: 30px;
+  position: relative;
+
+  &__swipe {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background: red;
+    opacity: .3;
+  }
+}
+
+
+.comment {
+  background: #f9f9f9;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 165px;
+
+    .hooper {
+      height: auto;
+
+      &-next {
+        right: -50px;
+      }
+
+      &-prev {
+        left: -50px;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    //color: $price-color;
+
+    padding-bottom: 40px;
+  }
+
+  &__block {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  &__swipe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 30px;
+
+    margin-bottom: 15px;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+
+    font-weight: bold;
+    font-size: 16px;
+    //color: $price-color;
+    span {
+      font-weight: normal;
+      font-size: 14px;
+      //color: $color-body-text;
+
+      padding-top: 10px;
+    }
+  }
+
+  &__author-img, &__author-img img {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__author-img {
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px 0 20px 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .comment {
+    &__wrapper {
+      padding: 60px 60px;
+    }
+
+    &__text {
+      text-align: justify;
+    }
+  }
+}
