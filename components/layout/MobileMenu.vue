@@ -1,13 +1,16 @@
 <template lang="pug">
   .mobile-menu(:class="getCssMobile")
-    button.mobile-menu__btn(@click="isMenuActive = !isMenuActive") mobile-btn
+    button.burger-btn.mobile-menu__burger(@click="isMenuActive = !isMenuActive")
+      span.burger-btn__top-bar
+      span.burger-btn__middle-bar
+      span.burger-btn__bottom-bar
     nav.mobile-menu__nav
       app-logo
       button.mobile-menu__btn-close(@click="isMenuActive = !isMenuActive")
         span ×
       ul.mobile-menu__list
         li(v-for='(link,index) in links' :key="index")
-          nuxt-link.mobile-menu__link(:to="link.path" exact) {{link.name}}
+          nuxt-link.mobile-menu__link(:to="link.path" exact @click.native="isMenuActive = !isMenuActive") {{link.name}}
 </template>
 
 <script>
