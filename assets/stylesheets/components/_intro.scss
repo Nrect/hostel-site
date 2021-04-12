@@ -1,13 +1,23 @@
 .intro {
+  &--main {
+    height: 800px;
+    background: $--black url("~assets/images/intro-bg.jpg") no-repeat center center fixed;
+
+    .intro__subtitle {
+      display: block;
+    }
+  }
+
   width: 100%;
-  height: 970px;
-  background: $--black url("~assets/images/intro-bg.jpg") no-repeat center center fixed;
+  height: 75vh;
   background-size: cover;
+  background: $--black url("~assets/images/bg2.jpg") no-repeat center center fixed;
+
 
   &:after {
     content: '';
     width: 100%;
-    height: 970px;
+    height: 800px;
 
     display: block;
 
@@ -16,7 +26,11 @@
     left: 0;
 
     background: $--black;
-    opacity: .35;
+    opacity: .65;
+  }
+
+  &:not(.intro--main):after {
+    height: 75vh;
   }
 
   &__bg {
@@ -24,5 +38,31 @@
 
     width: 100%;
     height: 100%;
+  }
+
+  &__wrapper {
+    @extend %display-flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+    color: $--white;
+    text-align: center;
+  }
+
+  &__content {
+    z-index: 2;
+  }
+
+  &__title {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    display: none;
   }
 }

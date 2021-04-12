@@ -8,6 +8,7 @@
 import AppIntro from '~/components/Intro'
 
 export default {
-  components: { AppIntro }
+  components: { AppIntro },
+  layout: 'main'
 }
 </script>
