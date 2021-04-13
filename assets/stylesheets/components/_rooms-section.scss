@@ -1,12 +1,12 @@
 .rooms_section {
-  background: $--main-lighter;
+  background: #F1F0E8;
 
   &__wrapper {
     padding: 100px 0;
   }
 
   &__title {
-    margin: 0 auto;
+    margin: 0 auto 70px;
     padding-bottom: 10px;
 
     position: relative;
@@ -39,7 +39,12 @@
 
 .room-card {
   margin-right: 30px;
+  padding: 30px 30px 60px;
+
   position: relative;
+  background: $--white;
+
+  text-align: center;
 
   &__img {
     display: block;
@@ -53,7 +58,7 @@
 
     width: 100%;
     height: 100%;
-    background: red;
+    //background: red;
     opacity: .3;
   }
 }
