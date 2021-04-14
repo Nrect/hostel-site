@@ -1,2 +1,27 @@
 .btn {
+  display: block;
+  width: 125px;
+
+  border: 1px solid $--main;
+
+  a {
+    padding: 8px 26px;
+
+    display: block;
+    background: $--main;
+    border: 1px solid $--white;
+
+    color: $--white;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  &:hover {
+    border: 1px solid $--black;
+
+    a {
+      background: $--black;
+    }
+  }
+
 }
