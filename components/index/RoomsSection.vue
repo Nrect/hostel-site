@@ -2,7 +2,7 @@
   .rooms_section
     .container
       .rooms_section__wrapper
-        h2.rooms_section__title Каюты
+        h2.title Каюты
         .card-slider
           hooper(:wheel-control="false" ref="carousel" :settings="hooperSettings")
             slide(v-for="x in 5" :key="x").card-slider__slide
