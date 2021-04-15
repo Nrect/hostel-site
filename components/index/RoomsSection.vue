@@ -5,13 +5,13 @@
         h2.title Каюты
         .card-slider
           hooper(:wheel-control="false" ref="carousel" :settings="hooperSettings")
-            slide(v-for="x in 5" :key="x").card-slider__slide
+            slide(v-for="(room,idx) in rooms" :key="idx").card-slider__slide
               .room-card
                 .room-card__wrapper
                   .room-card__img
-                    img(src="http://lamaro.like-themes.com/wp-content/uploads/2018/02/service_01-430x280.jpg")
-                  h3.room-card__title Двухместная каюта с ванной комнатой
-                  .room-card__description Отдельный номер для двоих с большой и удобной двуспальной кроватью, шкафом для одежды и телевизором.  В номере имеется просторный собственный сан. узел и душевая.
+                    img(:src="room.imgSrc")
+                  h3.room-card__title {{room.title}}
+                  .room-card__description {{room.content}}
                   span.room-card__btn.btn
                     nuxt-link(to="/") Подробнее
         .card-slider__buttons
@@ -23,10 +23,13 @@
 </template>
 
 <script>
+import { roomsData } from '~/content/rooms'
+
 export default {
   name: 'AppRoomsSection',
   data () {
     return {
+      roomCards: [],
       hooperSettings: {
         itemsToShow: 3,
         pagination: 'no',
@@ -43,6 +46,11 @@ export default {
           }
         }
       }
+    }
+  },
+  computed: {
+    rooms () {
+      return roomsData
     }
   },
   methods: {

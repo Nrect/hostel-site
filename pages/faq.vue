@@ -1,10 +1,15 @@
 <template lang="pug">
   .faq
-    .container faq
+    .container
+      .wrapper
+        app-accordion
 </template>
 
 <script>
+import AppAccordion from '~/components/Accordion'
+
 export default {
-  name: 'faq'
+  name: 'Faq',
+  components: { AppAccordion }
 }
 </script>

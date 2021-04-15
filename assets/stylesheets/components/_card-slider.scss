@@ -3,6 +3,10 @@
     height: auto !important;
   }
 
+  &__slide {
+    display: flex;
+  }
+
   &__buttons {
     margin-top: 45px;
 
