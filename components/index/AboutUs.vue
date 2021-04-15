@@ -1,5 +1,5 @@
 <template lang="pug">
-  .about-us
+  .aboutUs-section
     .container
       .wrapper
         h2.title Почему именно мы
