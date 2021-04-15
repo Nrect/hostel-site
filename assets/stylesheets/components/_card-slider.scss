@@ -1,6 +1,8 @@
 .card-slider {
   .hooper {
     height: auto !important;
+    align-items: flex-start;
+    justify-content: center;
   }
 
   &__slide {
