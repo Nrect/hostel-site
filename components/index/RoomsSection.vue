@@ -1,7 +1,7 @@
 <template lang="pug">
   .rooms_section
     .container
-      .rooms_section__wrapper
+      .wrapper.wrapper--slider
         h2.title Каюты
         .card-slider
           hooper(:wheel-control="false" ref="carousel" :settings="hooperSettings")

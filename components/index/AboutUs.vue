@@ -1,7 +1,7 @@
 <template lang="pug">
   .about-us
     .container
-      .about-us__wrapper
+      .wrapper
         h2.title Почему именно мы
 </template>
 

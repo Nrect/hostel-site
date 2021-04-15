@@ -24,4 +24,20 @@
     }
   }
 
+  &--secondary {
+    border: 1px solid $--black;
+
+    a {
+      background: $--black;
+    }
+
+    &:hover {
+      border: 1px solid $--main;
+
+      a {
+        background: $--main;
+      }
+    }
+
+  }
 }
