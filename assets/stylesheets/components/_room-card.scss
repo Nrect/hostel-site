@@ -86,3 +86,35 @@
     }
   }
 }
+
+
+.rooms {
+  background: $--gray;
+
+  &__cards {
+    @extend %display-flex;
+    flex-wrap: wrap;
+  }
+
+  &__cards-wrapper {
+    flex: 0 0 50%;
+    display: flex;
+    padding: 10px;
+  }
+}
+
+.rooms-card {
+  background-color: $--white;
+  flex-basis: 100%;
+}
+
+.card_cont {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card_wp {
+  flex: 0 0 33.333%;
+  display: flex;
+  padding: 10px; /* gutter width */
+}

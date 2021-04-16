@@ -1,6 +1,7 @@
 <template lang="pug">
   .services
-    .container services
+    .container
+      .wrapper services
 </template>
 
 <script>
