@@ -48,18 +48,21 @@
     font-size: 18px;
   }
 
-  &__contact, &__contact > a {
-    padding: 7px 0;
+  &__contact > p, &__contact > a {
+    padding: 7px 8px 7px;
+    max-width: 210px;
 
     display: block;
     color: $--white;
+  }
 
-    &:not(.footer__contact):hover {
-      color: $--main;
-    }
+  &__contact > a:hover {
+    color: $--main;
   }
 
   &__contacts {
+    display: flex;
+    flex-direction: column;
     max-width: 250px;
   }
 
@@ -69,10 +72,8 @@
   }
 
   &__contact-icon {
-    margin-right: 8px;
-
-    width: 18px;
-    height: 18px;
+    width: 34px;
+    height: 24px;
     fill: $--main;
   }
 }

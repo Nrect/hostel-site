@@ -1,7 +1,8 @@
 .intro {
   &--main {
     height: 800px;
-    background: $--black url("~assets/images/intro-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background: $--black url("~assets/images/intro-bg.jpg") no-repeat fixed;
 
     .intro__subtitle {
       display: block;
@@ -15,7 +16,7 @@
   width: 100%;
   height: 75vh;
   background-size: cover;
-  background: $--black url("~assets/images/bg2.jpg") no-repeat center center fixed;
+  background: $--black url("~assets/images/bg2.jpg") no-repeat fixed;
 
 
   &:after {
@@ -72,10 +73,11 @@
 
 @media screen and (max-width: 992px) {
   .intro {
-    &__content{
+    &__content {
       padding-left: 8px;
       padding-right: 8px;
     }
+
     &__title {
       padding-top: 0;
       text-transform: uppercase;

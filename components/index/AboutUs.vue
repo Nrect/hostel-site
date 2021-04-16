@@ -19,6 +19,8 @@
               use(xlink:href="#envelop")
             .aboutUs-section__card-title Сервис
             .aboutUs-section__card-description Наша команда состоит из молодых и отзывчивых ребят готовых помочь Вам провести прекрасно время у нас в гостях.
+        span.btn.btn--secondary.btn--section
+          nuxt-link(to="/about-us") Показать больше
 </template>
 
 <script>

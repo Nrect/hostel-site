@@ -4,7 +4,7 @@
       .wrapper
         h2.title FAQ
         app-accordion
-        span.faq__btn.btn.btn--secondary
+        span.btn.btn--secondary.btn--section
           nuxt-link(to="/faq") Показать больше
 </template>
 

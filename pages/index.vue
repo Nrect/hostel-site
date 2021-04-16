@@ -17,7 +17,6 @@ export default {
     AppAboutUs,
     AppRoomsSection,
     AppIntro
-  },
-  layout: 'main'
+  }
 }
 </script>

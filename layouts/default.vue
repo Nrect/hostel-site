@@ -2,7 +2,7 @@
   div
     AppSprites
     AppHeader
-    app-intro
+    app-intro(:class="{'intro--main' :this.$route.name === 'index'}")
     Nuxt
     app-footer
 </template>

@@ -1,23 +1,24 @@
 body {
   color: $--black-text;
   font-weight: 400;
-  font-family: 'Raleway', sans-serif;
+  font-family: $--font-main;
   font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+  font-family: $--font-headers;
 }
 
 h1 {
   font-size: 60px;
-  font-family: 'Playfair Display', serif;
 }
 
 h2 {
   font-size: 48px;
-  font-family: 'Playfair Display', serif;
 }
 
 h3 {
   font-size: 30px;
-  font-family: 'Playfair Display', serif;
 }
 
 a {

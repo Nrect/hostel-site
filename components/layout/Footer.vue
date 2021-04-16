@@ -26,7 +26,7 @@
           .footer__contact
             svg.footer__contact-icon
               use(xlink:href="#map-marker")
-            | Адрес : п. Прибрежное, ул. Южное полукольцо, 4
+            p п. Прибрежное, ул. Южное полукольцо, 4
 </template>
 
 <script>
