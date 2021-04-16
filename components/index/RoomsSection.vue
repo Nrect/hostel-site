@@ -31,17 +31,16 @@ export default {
     return {
       roomCards: [],
       hooperSettings: {
-        itemsToShow: 3,
         pagination: 'no',
         trimWhiteSpace: true,
         breakpoints: {
-          1500: {
+          1590: {
             itemsToShow: 3
           },
-          768: {
+          992: {
             itemsToShow: 2
           },
-          320: {
+          768: {
             itemsToShow: 1
           }
         }
