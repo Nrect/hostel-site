@@ -1,5 +1,6 @@
 <template lang="pug">
   .intro
+    .rope-border
     .intro__wrapper
       .container
         .intro__content
