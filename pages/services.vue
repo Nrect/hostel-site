@@ -1,11 +1,19 @@
 <template lang="pug">
   .services
     .container
-      .wrapper services
+      .wrapper
+        h2.title Бесплатные услуги
+        app-services-cards
+        h2.title Платные услуги
+        app-services-cards
+
 </template>
 
 <script>
+import AppServicesCards from '~/components/services/ServicesCards'
+
 export default {
-  name: 'Services'
+  name: 'Services',
+  components: { AppServicesCards }
 }
 </script>
