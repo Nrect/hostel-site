@@ -21,19 +21,20 @@ export default {
       const routeName = this.$route.name
       switch (routeName) {
         case 'index':
-          return 'HOSTEL PALMBURG – ТИХАЯ ГАВАНЬ ВДАЛИ ОТ ГОРОДСКОЙ СУЕТЫ'
+          return this.$t('introTitle').index
         case 'about-us':
-          return 'О нас'
+          return this.$t('introTitle').aboutUs
         case 'rooms':
-          return 'НОМЕРА'
+          return this.$t('introTitle').rooms
         case 'services':
-          return 'Услуги'
+          return this.$t('introTitle').services
         case 'faq':
-          return 'FAQ'
+          return this.$t('introTitle').faq
         case 'contacts':
-          return 'Наши Контакты '
+          return this.$t('introTitle').contacts
+        default:
+          return routeName
       }
-      return routeName
     }
   }
 }

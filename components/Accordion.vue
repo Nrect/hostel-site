@@ -1,6 +1,6 @@
 <template lang="pug">
   .accordion
-    label(v-for="tab in accordionContent" :key="tab").accordion__tab.card
+    label(v-for="(tab,index) in accordionContent" :key="index").accordion__tab.card
       input(type='radio' name='checkbox-accordion').accordion__input
       .accordion__header
         .accordion__title {{tab.title}}
@@ -15,7 +15,7 @@ export default {
   name: 'AppAccordion',
   props: {
     accordionContent: {
-      type: Object,
+      type: Array,
       required: true
     }
   }
