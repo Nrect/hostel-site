@@ -66,7 +66,7 @@ export default {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       onlyOnRoot: true // recommended
-    },
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
