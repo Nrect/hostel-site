@@ -1,0 +1,84 @@
+.card-aboutUs {
+  width: 100%;
+  border: 1px solid #F1F0E8;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.11);
+
+  &__wrapper {
+    padding: 45px;
+  }
+
+  &__map {
+    position: relative;
+  }
+
+  &__map-buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__map-btn {
+    padding: 20px;
+    background: $--main;
+    border: 1px solid $--main-darker;
+    cursor: pointer;
+
+    img {
+      height: 50px;
+      width: 50px;
+    }
+
+    &:hover {
+      background: lighten($--main, 5);
+    }
+  }
+
+  &__content {
+    padding-bottom: 25px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__text-title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+    line-height: 1.5;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contacts {
+    @extend %display-flex;
+    flex-wrap: wrap;
+  }
+
+  &__contact {
+    margin-bottom: 20px;
+    @extend %display-flex;
+    flex-basis: 50%;
+    align-items: center;
+  }
+
+  &__contact-icon {
+    margin-right: 24px;
+    width: 24px;
+    height: 24px;
+    fill: $--main;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-aboutUs {
+    &__contacts {
+      flex-direction: column;
+    }
+  }
+}

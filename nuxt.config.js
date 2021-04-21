@@ -28,11 +28,12 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/stylesheets/main.scss'
+    '@/assets/stylesheets/main.scss',
+    'hooper/dist/hooper.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/slider.js', '~/plugins/i18n.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -47,5 +48,13 @@ export default {
   modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+    postcss: {
+      preset: {
+        autoprefixer: {
+          overrideBrowserslist: ['last 3 versions', '> 1%']
+        }
+      }
+    }
+  }
 }

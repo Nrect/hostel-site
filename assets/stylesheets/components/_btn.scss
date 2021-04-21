@@ -1,0 +1,55 @@
+.btn {
+  display: block;
+  width: 125px;
+
+  border: 1px solid $--main;
+
+  a {
+    padding: 8px 26px;
+
+    display: block;
+    background: $--main;
+    border: 1px solid $--white;
+
+    color: $--white;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  &:hover {
+    border: 1px solid $--black;
+
+    a {
+      background: $--black;
+    }
+  }
+
+  &--secondary {
+    border: 1px solid $--black;
+
+    a {
+      background: $--black;
+    }
+
+    &:hover {
+      border: 1px solid $--main;
+
+      a {
+        background: $--main;
+      }
+    }
+
+  }
+
+  &--section {
+    margin: 50px auto 0;
+
+    width: 200px;
+
+    a {
+      padding: 20px 40px;
+      text-align: center;
+    }
+  }
+}
+
