@@ -5,9 +5,9 @@
         li(v-for='(link,index) in links' :key="index")
           nuxt-link.header-nav__link(:to="link.path" exact) {{link.name}}
       .header-nav__i18n
-        button.header-nav__i18n-btn(@click="changeLanguage('ru')") РУС
+        nuxt-link.header-nav__i18n-btn(@click.native="changeLanguage('ru')" :to="switchLocalePath('ru')") РУС
         |  |
-        button.header-nav__i18n-btn(@click="changeLanguage('en')") ENG
+        nuxt-link.header-nav__i18n-btn(@click.native="changeLanguage('en')" :to="switchLocalePath('en')") ENG
 </template>
 
 <script>
@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     changeLanguage (lang) {
-      this.$i18n.locale = lang
+      this.$i18n.setLocale(lang)
     }
   }
 }

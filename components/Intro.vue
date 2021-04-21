@@ -4,7 +4,8 @@
     .intro__wrapper
       .container
         .intro__content
-          h1.intro__title {{getPageName}}
+          //h1.intro__title {{ this.$route.name}}
+          h1.intro__title {{ getPageName}}
           p.intro__subtitle Добро пожаловать в самый морской и современный хостел Калининграда на берегу реки Преголя.
 </template>
 
@@ -18,7 +19,7 @@ export default {
   },
   computed: {
     getPageName () {
-      const routeName = this.$route.name
+      const routeName = this.$route.name.slice(0, -5)
       switch (routeName) {
         case 'index':
           return this.$t('introTitle').index
