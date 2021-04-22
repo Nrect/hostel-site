@@ -9,7 +9,15 @@ export const roomsData = [
       'шкафом для одежды',
       'телевизор'
     ],
-    imageSet: [],
+    imageSet: [
+      require('@/assets/images/room2/1.jpg'),
+      require('@/assets/images/room2/2.jpg'),
+      require('@/assets/images/room2/3.jpg'),
+      require('@/assets/images/room2/4.jpg'),
+      require('@/assets/images/room2/5.jpg'),
+      require('@/assets/images/room2/6.jpg'),
+      require('@/assets/images/room2/7.jpg')
+    ],
     additionContent: [
       'В номере имеется просторный собственный сан. узел и душевая.'
     ]
