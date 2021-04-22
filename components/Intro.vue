@@ -19,6 +19,7 @@ export default {
   computed: {
     getPageName () {
       const routeName = this.$route.name.slice(0, -5)
+      const routeParam = this.$route.params.id
       switch (routeName) {
         case 'index':
           return this.$t('introTitle').index
@@ -32,8 +33,26 @@ export default {
           return this.$t('introTitle').faq
         case 'contacts':
           return this.$t('introTitle').contacts
+        case 'rooms-id':
+          return this.getRoomName(routeParam)
         default:
           return routeName
+      }
+    }
+  },
+  methods: {
+    getRoomName (param) {
+      switch (param) {
+        case 'two-room':
+          return 'Двуместная комната'
+        case 'ten-room':
+          return 'Двуместная комната'
+        case 'twelve-room':
+          return 'Двуместная комната'
+        case 'eight-room':
+          return 'Двуместная комната'
+        case 'six-room':
+          return 'Двуместная комната'
       }
     }
   }
