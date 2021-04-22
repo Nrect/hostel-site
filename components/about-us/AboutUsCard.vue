@@ -1,15 +1,15 @@
 <template lang="pug">
-  .card-aboutUs
-    .card-aboutUs__wrapper
-      h2.card-aboutUs__title HOSTEL PALMBURG – ТИХАЯ ГАВАНЬ ВДАЛИ ОТ ГОРОДСКОЙ СУЕТЫ
-      .card-aboutUs__content
-        p.card-aboutUs__text Добро пожаловать в самый морской и современный хостел Калининграда на берегу реки Преголя.
-        p.card-aboutUs__text Мы - команда Hostel Palmburg!
-        p.card-aboutUs__text У нас вы отдохнете от «бетонных джунглей». Чистый воздух и тишина пригорода встретят Вас, если Вы решите стать нашим гостем. Мы уже подумали о Вас заранее, поэтому Вы будете чувствовать себя как дома. Городская суета, шум и гам или дивные закаты у воды на фоне яхт? Выбор остаётся только за Вами.
-      h2.card-aboutUs__title ПОЧЕМУ ИМЕННО МЫ?
-      .card-aboutUs__content(v-for="(advantage,idx) in advantages" :key="idx")
-        h3.card-aboutUs__text-title {{advantage.title}}
-        p.card-aboutUs__text {{advantage.description}}
+  .card-about
+    .card-about__wrapper
+      h2.card-about__title HOSTEL PALMBURG – ТИХАЯ ГАВАНЬ ВДАЛИ ОТ ГОРОДСКОЙ СУЕТЫ
+      .card-about__content
+        p.card-about__text Добро пожаловать в самый морской и современный хостел Калининграда на берегу реки Преголя.
+        p.card-about__text Мы - команда Hostel Palmburg!
+        p.card-about__text У нас вы отдохнете от «бетонных джунглей». Чистый воздух и тишина пригорода встретят Вас, если Вы решите стать нашим гостем. Мы уже подумали о Вас заранее, поэтому Вы будете чувствовать себя как дома. Городская суета, шум и гам или дивные закаты у воды на фоне яхт? Выбор остаётся только за Вами.
+      h2.card-about__title ПОЧЕМУ ИМЕННО МЫ?
+      .card-about__content(v-for="(advantage,idx) in advantages" :key="idx")
+        h3.card-about__text-title {{advantage.title}}
+        p.card-about__text {{advantage.description}}
 </template>
 
 <script>
