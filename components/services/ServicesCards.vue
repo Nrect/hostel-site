@@ -1,6 +1,6 @@
 <template lang="pug">
   .services-cards
-    .services-cards__card-wrapper(v-for="(service,key) in this.$t('freeServices')" :key="key")
+    .services-cards__card-wrapper(v-for="(service,key) in services" :key="key")
       .services-cards__card
         .services-cards__card-icon
           svg
@@ -10,6 +10,12 @@
 
 <script>
 export default {
-  name: 'AppServicesCards'
+  name: 'AppServicesCards',
+  props: {
+    services: {
+      type: Object,
+      default: () => {}
+    }
+  }
 }
 </script>

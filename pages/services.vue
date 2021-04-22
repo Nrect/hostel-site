@@ -3,7 +3,7 @@
     .container
       .wrapper
         h2.title Бесплатные услуги
-        app-services-cards
+        app-services-cards(:services="this.$t('freeServices')")
     .quote
       .container
         .wrapper
@@ -12,7 +12,7 @@
     .container
       .wrapper
         h2.title Платные услуги
-        app-services-cards
+        app-services-cards(:services="this.$t('paidServices')")
 
 </template>
 
