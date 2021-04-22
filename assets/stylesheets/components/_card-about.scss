@@ -93,13 +93,20 @@
     @extend %display-flex;
     flex-basis: 50%;
     align-items: center;
+
+    a {
+      word-wrap: anywhere;
+    }
   }
 
   &__contact-icon {
     margin-right: 24px;
     width: 24px;
     height: 24px;
+    min-height: 24px;
+    min-width: 24px;
     fill: $--main;
+    flex-grow: 0;
   }
 
   &__list {
@@ -133,9 +140,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .card-aboutUs {
+  .card-about {
     &__contacts {
       flex-direction: column;
+    }
+
+    &__contact {
+      flex-shrink: 1;
+      flex-basis: 100%;
     }
   }
 }
