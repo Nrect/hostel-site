@@ -20,5 +20,19 @@ export default {
     books_games: 'BOOKS AND BOARD GAMES',
     computer: 'SHARED COMPUTER',
     tv: 'TV CHANNELS + PS4'
+  },
+  paidServices: {
+    souvenir: 'Original souvenirs',
+    visa: 'Visa help',
+    velo: 'Bicycle for rent',
+    excursion: 'Guided tours',
+    belie: 'Additional linen and towel change',
+    wash: 'Laundry',
+    halat: 'Bathrobe',
+    bus: 'Airport transfer',
+    breakfast: 'Breakfast',
+    shoez: 'Slippers',
+    cosmetic: 'Cosmetic kits',
+    hygien: 'Hygiene kits'
   }
 }
