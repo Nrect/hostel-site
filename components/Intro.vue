@@ -44,15 +44,15 @@ export default {
     getRoomName (param) {
       switch (param) {
         case 'two-room':
-          return 'Двуместная комната'
-        case 'ten-room':
-          return 'Двуместная комната'
-        case 'twelve-room':
-          return 'Двуместная комната'
+          return 'Двухместная каюта '
+        case 'six-room':
+          return '6 - местная каюта для женщин'
         case 'eight-room':
           return 'Двуместная комната'
-        case 'six-room':
-          return 'Двуместная комната'
+        case 'ten-room':
+          return '10 - местная каюта для мужчин и женщин1'
+        case 'twelve-room':
+          return '12 - местная каюта для мужчин и женщин '
       }
     }
   }

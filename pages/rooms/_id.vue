@@ -10,12 +10,12 @@
             hooper-navigation(slot="hooper-addons")
             hooper-pagination(slot="hooper-addons")
           .card-about__wrapper
-            h2.card-about__title 12 - местная каюта для мужчин и женщин с общим сан. узлом
+            h2.card-about__title {{room.title}}
             .card-about__content
               ul.card-about__list
-                li.card-about__list-item(v-for="x in 10" :key="x")
-                  span 123123 {{x}}
-              p.card-about__text В номере имеется просторный собственный сан. узел и душевая.
+                li.card-about__list-item(v-for="(advantage,idx) in room.advantages" :key="idx")
+                  span {{advantage}}
+              p.card-about__text(v-for="(content,idx) in room.additionContent" :key="idx") {{content}}
             .card-about__buttons
               span.card-about__btn.btn
                 nuxt-link(to="/rooms") Назад
@@ -44,8 +44,8 @@ export default {
     }
   },
   computed: {
-    rooms () {
-      return roomsData
+    room () {
+      return roomsData.find(room => room.slug === this.$route.params.id)
     }
   },
   mounted () {

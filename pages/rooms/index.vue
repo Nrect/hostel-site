@@ -12,7 +12,7 @@
                 .rooms-card__description {{room.content}}
                 .rooms-card__buttons
                   span.rooms-card__btn.btn
-                    nuxt-link(to="/") Подробнее
+                    nuxt-link(:to="'/rooms/'+room.slug") Подробнее
                   span.rooms-card__btn.btn.btn--secondary
                     nuxt-link(to="/") Забронировать
 </template>

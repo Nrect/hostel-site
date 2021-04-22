@@ -1,4 +1,4 @@
-export default {
+export default () => ({
   introTitle: {
     index: 'HOSTEL PALMBURG – ТИХАЯ ГАВАНЬ ВДАЛИ ОТ ГОРОДСКОЙ СУЕТЫ',
     aboutUs: 'О нас',
@@ -22,10 +22,25 @@ export default {
     tv: 'ТВ, игровая приставка и WiFi'
   },
   rooms: {
-    room2: {},
-    room6: {},
-    room8: {},
-    room10: {},
-    room12: {}
+    room2: {
+      title: '',
+      content: ''
+    },
+    room6: {
+      title: '',
+      content: ''
+    },
+    room8: {
+      title: '',
+      content: ''
+    },
+    room10: {
+      title: '',
+      content: ''
+    },
+    room12: {
+      title: '',
+      content: ''
+    }
   }
-}
+})
