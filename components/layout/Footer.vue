@@ -27,6 +27,8 @@
             svg.footer__contact-icon
               use(xlink:href="#map-marker")
             p п. Прибрежное, ул. Южное полукольцо, 4
+    .rope-border
+    .footer__bottom-img
 </template>
 
 <script>
