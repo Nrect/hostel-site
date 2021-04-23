@@ -1,12 +1,13 @@
 .gallery {
   &__slider {
-    height: 450px !important;
+    height: auto !important;
   }
 
   &__img {
     position: relative;
     display: flex;
     justify-content: center;
+    width: 500px;
 
     &:before {
       content: '';
@@ -17,12 +18,12 @@
 
       position: absolute;
       top: 0;
-      left: 0;
+      opacity: .3;
     }
 
     img {
-      width: 450px;
-      height: 450px;
+      width: 500px;
+      height: 380px;
     }
   }
 
