@@ -1,5 +1,11 @@
 <template lang="pug">
   .card-about
+    hooper(ref="carousel" :settings="hooperSettings").card-about__slider
+      slide.card-about__slide(v-for="x in 3" :key="x")
+        .card-about__img
+          img(src="http://lamaro.like-themes.com/wp-content/uploads/2018/02/service_01-430x280.jpg")
+      hooper-navigation(slot="hooper-addons")
+      hooper-pagination(slot="hooper-addons")
     .card-about__wrapper
       h2.card-about__title HOSTEL PALMBURG – ТИХАЯ ГАВАНЬ ВДАЛИ ОТ ГОРОДСКОЙ СУЕТЫ
       .card-about__content
@@ -30,7 +36,10 @@ export default {
           title: '3. Сервис',
           description: 'Наша команда состоит из молодых и отзывчивых ребят готовых помочь Вам провести прекрасно время у нас в гостях. Организовать экскурсию, трансфер, вечерний досуг, ответить на все интересующие Вас вопросы для нас только за счастье. У нас всегда чисто! Наши администраторы круглосуточно следят за поддержанием чистоты. Наши двери открыты для вас всегда.'
         }
-      ]
+      ],
+      hooperSettings: {
+        wheelControl: false
+      }
     }
   }
 }

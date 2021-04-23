@@ -38,7 +38,15 @@
     &:hover {
       border-color: $--main;
       background: $--main;
-      color: $--white;
+
+      svg {
+        fill: $--white;
+      }
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
     }
   }
 }
