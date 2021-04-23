@@ -4,9 +4,9 @@
       .wrapper
         .card-about
           hooper(ref="carousel" :settings="hooperSettings").card-about__slider
-            slide.card-about__slide(v-for="x in 3" :key="x")
+            slide.card-about__slide(v-for="(img,idx) in room.imageSet" :key="idx")
               .card-about__img
-                img(src="http://lamaro.like-themes.com/wp-content/uploads/2018/02/service_01-430x280.jpg")
+                img(:src="img")
             hooper-navigation(slot="hooper-addons")
             hooper-pagination(slot="hooper-addons")
           .card-about__wrapper
