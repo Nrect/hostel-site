@@ -25,7 +25,7 @@ export default {
   data () {
     return {
       aboutImages: [
-        require('@/assets/images/about-us/1.jpg'),
+        // require('@/assets/images/about-us/1.jpg'),
         require('@/assets/images/about-us/2.jpg'),
         require('@/assets/images/about-us/3.jpg'),
         require('@/assets/images/about-us/4.jpg'),
