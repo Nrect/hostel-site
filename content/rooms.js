@@ -37,7 +37,8 @@ export const roomsData = [
       require('@/assets/images/room6/3.jpg'),
       require('@/assets/images/room6/4.jpg'),
       require('@/assets/images/room6/5.jpg'),
-      require('@/assets/images/room6/6.jpg')
+      require('@/assets/images/room6/6.jpg'),
+      require('@/assets/images/room6/7.jpg')
     ],
     additionContent: ['Просторный номер односпальными кроватями и уютными слип-боксами.']
   },
