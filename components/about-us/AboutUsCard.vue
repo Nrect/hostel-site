@@ -1,21 +1,22 @@
 <template lang="pug">
-  .card-about
-    hooper(ref="carousel" :settings="hooperSettings").card-about__slider
-      slide.card-about__slide(v-for="x in 3" :key="x")
-        .card-about__img
-          img(src="http://lamaro.like-themes.com/wp-content/uploads/2018/02/service_01-430x280.jpg")
-      hooper-navigation(slot="hooper-addons")
-      hooper-pagination(slot="hooper-addons")
-    .card-about__wrapper
-      h2.card-about__title HOSTEL PALMBURG – ТИХАЯ ГАВАНЬ ВДАЛИ ОТ ГОРОДСКОЙ СУЕТЫ
-      .card-about__content
-        p.card-about__text Добро пожаловать в самый морской и современный хостел Калининграда на берегу реки Преголя.
-        p.card-about__text Мы - команда Hostel Palmburg!
-        p.card-about__text У нас вы отдохнете от «бетонных джунглей». Чистый воздух и тишина пригорода встретят Вас, если Вы решите стать нашим гостем. Мы уже подумали о Вас заранее, поэтому Вы будете чувствовать себя как дома. Городская суета, шум и гам или дивные закаты у воды на фоне яхт? Выбор остаётся только за Вами.
-      h2.card-about__title ПОЧЕМУ ИМЕННО МЫ?
-      .card-about__content(v-for="(advantage,idx) in advantages" :key="idx")
-        h3.card-about__text-title {{advantage.title}}
-        p.card-about__text {{advantage.description}}
+  .wrapper
+    .card-about
+      hooper(ref="carousel" :settings="hooperSettings").card-about__slider
+        slide.card-about__slide(v-for="(img,i) in aboutImages" :key="i")
+          .card-about__img
+            img(:src="img")
+        hooper-navigation(slot="hooper-addons")
+        hooper-pagination(slot="hooper-addons")
+      .card-about__wrapper
+        h2.card-about__title HOSTEL PALMBURG – ТИХАЯ ГАВАНЬ ВДАЛИ ОТ ГОРОДСКОЙ СУЕТЫ
+        .card-about__content
+          p.card-about__text Добро пожаловать в самый морской и современный хостел Калининграда на берегу реки Преголя.
+          p.card-about__text Мы - команда Hostel Palmburg!
+          p.card-about__text У нас вы отдохнете от «бетонных джунглей». Чистый воздух и тишина пригорода встретят Вас, если Вы решите стать нашим гостем. Мы уже подумали о Вас заранее, поэтому Вы будете чувствовать себя как дома. Городская суета, шум и гам или дивные закаты у воды на фоне яхт? Выбор остаётся только за Вами.
+        h2.card-about__title ПОЧЕМУ ИМЕННО МЫ?
+        .card-about__content(v-for="(advantage,idx) in advantages" :key="idx")
+          h3.card-about__text-title {{advantage.title}}
+          p.card-about__text {{advantage.description}}
 </template>
 
 <script>
@@ -23,6 +24,14 @@ export default {
   name: 'AppAboutUsCard',
   data () {
     return {
+      aboutImages: [
+        // require('@/assets/images/about-us/1.jpg'),
+        require('@/assets/images/about-us/2.jpg'),
+        require('@/assets/images/about-us/3.jpg'),
+        require('@/assets/images/about-us/4.jpg'),
+        require('@/assets/images/about-us/5.jpg'),
+        require('@/assets/images/about-us/6.jpg')
+      ],
       advantages: [
         {
           title: '1. Расположение',
