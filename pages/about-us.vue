@@ -1,16 +1,19 @@
 <template lang="pug">
   .about-us
     .container
-      .wrapper
-        app-about-us-card
-
+      app-about-us-card
+      app-gallery
 </template>
 
 <script>
 import AppAboutUsCard from '~/components/about-us/AboutUsCard'
+import AppGallery from '~/components/about-us/Gallery'
 
 export default {
   name: 'AboutUs',
-  components: { AppAboutUsCard }
+  components: {
+    AppGallery,
+    AppAboutUsCard
+  }
 }
 </script>
