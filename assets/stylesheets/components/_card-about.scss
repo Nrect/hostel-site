@@ -111,6 +111,7 @@
 
   &__list {
     margin-bottom: 15px;
+    margin-left: 15px;
 
     list-style: disc;
   }
@@ -141,13 +142,19 @@
 
 @media screen and (max-width: 768px) {
   .card-about {
-    &__contacts {
-      flex-direction: column;
+    &__wrapper {
+      padding: 10px;
     }
 
-    &__contact {
-      flex-shrink: 1;
-      flex-basis: 100%;
+    &__title, &__description {
+      margin-bottom: 20px;
+      height: auto;
+    }
+    
+    &__btn {
+      a {
+        padding: 15px 10px;
+      }
     }
   }
 }
