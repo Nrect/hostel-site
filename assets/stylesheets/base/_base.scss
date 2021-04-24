@@ -8,29 +8,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  //background-color: $--background;
-  //font-family: 'Montserrat', serif;
-  //font-weight: 600;
-  //font-style: normal;
-  //font-size: 14px;
-  //line-height: 1.75;
-  //color: $--text-primary;
-}
-
-h1, h2 {
-  //font-family: 'Druk Wide Cy TT Super', sans-serif;
-  //font-weight: 400;
-  //color: $--text-primary;
+  transition: all 0.2s linear;
 }
 
 a {
-  //color: $--primary;
   text-decoration: none;
 }
 
 ul {
   list-style: none;
+}
+
+.page-enter-active, .page-leave-active, {
+  transition: opacity .3s;
+}
+
+.page-enter, .page-leave-active {
+  opacity: 0;
 }

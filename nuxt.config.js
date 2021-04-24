@@ -28,11 +28,13 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/stylesheets/main.scss'
+    '@/assets/stylesheets/main.scss',
+    'hooper/dist/hooper.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    '~/plugins/slider.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -44,8 +46,37 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['nuxt-i18n'],
+  i18n: {
+    locales: [
+      {
+        code: 'ru',
+        file: 'ru.js'
+      },
+      {
+        code: 'en',
+        file: 'en.js'
+      }
+    ],
+    defaultLocale: 'ru',
+    lazy: true,
+    langDir: 'static/locales',
+    skipSettingLocaleOnNavigate: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      onlyOnRoot: true // recommended
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+    postcss: {
+      preset: {
+        autoprefixer: {
+          overrideBrowserslist: ['last 3 versions', '> 1%']
+        }
+      }
+    }
+  }
 }

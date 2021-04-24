@@ -12,8 +12,26 @@
 
 // Layout-related sections
 @import 'layout/header',
+'layout/header-nav',
+'layout/mobile-menu',
 'layout/footer';
 
 // Components
-@import 'components/button';
-
+@import 'components/intro',
+'components/title',
+'components/logo',
+'components/btn',
+'components/burger-btn',
+'components/rooms-section',
+'components/room-card',
+'components/card-slider',
+'components/faq',
+'components/accordion',
+'components/about-us',
+'components/aboutUs-section',
+'components/rope-border',
+'components/card-about',
+'components/quote',
+'components/other-rooms',
+'components/gallery',
+'components/services-cards';
