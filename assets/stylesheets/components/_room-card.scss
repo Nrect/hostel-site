@@ -1,5 +1,5 @@
 .room-card {
-  margin-right: 30px;
+  margin: 0 15px;
 
   position: relative;
   background: $--white;
@@ -171,4 +171,21 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 576px) {
+  .room-card {
+    &__wrapper {
+      padding: 10px;
+    }
+
+    &__title {
+      height: 80px;
+    }
+
+    &__description {
+      margin-bottom: 20px;
+    }
+  }
+
 }

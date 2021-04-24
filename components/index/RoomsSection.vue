@@ -13,12 +13,16 @@
                   h3.room-card__title {{room.title}}
                   .room-card__description {{room.content}}
                   span.room-card__btn.btn
-                    nuxt-link(to="/") Подробнее
+                    nuxt-link(:to="'/rooms/'+ room.slug" ) Подробнее
         .card-slider__buttons
           button(@click.prevent="slidePrev").card-slider__btn
-            span <
+            span
+              svg(style="transform: rotate(180deg);")
+                use(xlink:href="#angle")
           button(@click.prevent="slideNext").card-slider__btn
-            span >
+            span
+              svg
+                use(xlink:href="#angle")
 
 </template>
 
