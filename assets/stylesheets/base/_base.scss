@@ -26,3 +26,17 @@ ul {
 .page-enter, .page-leave-active {
   opacity: 0;
 }
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .4;
+
+  &:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+
+    svg {
+      fill: #000000;
+    }
+  }
+}
