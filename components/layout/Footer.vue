@@ -32,6 +32,7 @@
               svg.footer__contact-icon
                 use(xlink:href="#whatsapp")
     .rope-border
+    .footer__center-img
     .footer__bottom-img
 </template>
 
