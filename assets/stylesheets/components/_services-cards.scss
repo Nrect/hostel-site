@@ -24,8 +24,8 @@
   &__card-icon {
     margin-bottom: 15px;
 
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: $--gray;
 
@@ -34,16 +34,17 @@
     align-items: center;
 
     svg {
-      width: 45px;
-      height: 70px;
+      width: 100px;
+      height: 100px;
       fill: $--main;
     }
   }
 
   &__card-title {
-    font-family: "Playfair Display", serif;
+    font-family: "Comfortaa", serif;
     font-weight: 400;
     flex: 1 0 auto;
+    text-transform: uppercase;
   }
 }
 

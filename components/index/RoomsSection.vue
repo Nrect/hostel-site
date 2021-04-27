@@ -4,7 +4,7 @@
       .wrapper.wrapper--slider
         h2.title Каюты
         .card-slider
-          hooper(:wheel-control="false" ref="carousel" :settings="hooperSettings")
+          hooper(ref="carousel" :settings="hooperSettings" @slide="checkSlideOption")
             slide(v-for="(room,idx) in rooms" :key="idx").card-slider__slide
               .room-card
                 .room-card__wrapper
@@ -15,11 +15,11 @@
                   span.room-card__btn.btn
                     nuxt-link(:to="'/rooms/'+ room.slug" ) Подробнее
         .card-slider__buttons
-          button(@click.prevent="slidePrev").card-slider__btn
+          button(@click.prevent="slidePrev" ref="prevBtn").card-slider__btn
             span
               svg(style="transform: rotate(180deg);")
                 use(xlink:href="#angle")
-          button(@click.prevent="slideNext").card-slider__btn
+          button(@click.prevent="slideNext" ref="nextBtn").card-slider__btn
             span
               svg
                 use(xlink:href="#angle")
@@ -37,6 +37,7 @@ export default {
       hooperSettings: {
         pagination: 'no',
         trimWhiteSpace: true,
+        wheelControl: false,
         breakpoints: {
           1590: {
             itemsToShow: 3
@@ -62,6 +63,21 @@ export default {
     },
     slideNext () {
       this.$refs.carousel.slideNext()
+    },
+    checkSlideOption (aboutSlide) {
+      const slideCount = roomsData.length - 3
+      const nextButton = this.$refs.nextBtn
+      const prevButton = this.$refs.prevBtn
+      nextButton.disabled = false
+      prevButton.disabled = false
+      if (aboutSlide.currentSlide === 0) {
+        prevButton.disabled = true
+        nextButton.disabled = false
+      }
+      if (aboutSlide.currentSlide === slideCount) {
+        nextButton.disabled = true
+        prevButton.disabled = false
+      }
     }
   }
 }

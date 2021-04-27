@@ -13,13 +13,15 @@ export default {
     freeWifi: 'free wifi',
     tea: 'Tea, coffee and cookies',
     taxi: 'Order a taxi',
-    fan: 'HAIR DRYER',
+    fen: 'HAIR DRYER',
     medical: 'FIRST AID',
     iron: 'IRON',
-    usb: 'USB SOCKETS',
-    books_games: 'BOOKS AND BOARD GAMES',
-    computer: 'SHARED COMPUTER',
-    tv: 'TV CHANNELS + PS4'
+    // usb: 'USB SOCKETS',
+    games: 'BOOKS AND BOARD GAMES',
+    // computer: 'SHARED COMPUTER',
+    tv: 'TV CHANNELS + PS4',
+    alcove: 'alcove',
+    playground: 'playground'
   },
   paidServices: {
     souvenir: 'Original souvenirs',
@@ -33,6 +35,7 @@ export default {
     breakfast: 'Breakfast',
     shoez: 'Slippers',
     cosmetic: 'Cosmetic kits',
-    hygien: 'Hygiene kits'
+    hygien: 'Hygiene kits',
+    grill: 'gas grill'
   }
 }
