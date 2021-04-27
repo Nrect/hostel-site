@@ -19,10 +19,11 @@
                   span.rooms-card__btn.btn
                     nuxt-link(:to="'/rooms/'+room.slug") Подробнее
                   span.rooms-card__btn.btn.btn--secondary
-                    nuxt-link(to="/") Забронировать
+                    button(@click="toggleBookingModal") Забронировать
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import { roomsData } from '~/content/rooms'
 
 export default {
@@ -31,6 +32,7 @@ export default {
     rooms () {
       return roomsData
     }
-  }
+  },
+  methods: { ...mapActions('layout', ['toggleBookingModal']) }
 }
 </script>

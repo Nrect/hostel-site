@@ -76,11 +76,13 @@ export default {
     }
   },
   mounted () {
-    const svg = document.getElementsByClassName('icon')
-    for (let i = 0; i < svg.length; i++) {
-      svg[i].removeAttribute('width')
-      svg[i].removeAttribute('height')
-      svg[i].getElementsByTagName('path')[0].remove()
+    if (process.browser) {
+      const svg = document.getElementsByClassName('icon')
+      for (let i = 0; i < svg.length; i++) {
+        svg[i].removeAttribute('width')
+        svg[i].removeAttribute('height')
+        svg[i].getElementsByTagName('path')[0].remove()
+      }
     }
   }
 }
