@@ -107,5 +107,12 @@
       padding-top: 0;
       text-transform: uppercase;
     }
+
+    &--main {
+      .intro__title {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
   }
 }
