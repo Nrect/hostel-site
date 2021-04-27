@@ -1,5 +1,6 @@
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  target: 'static',
+
   head: {
     title: 'hostel-palmburg',
     htmlAttrs: {
@@ -26,26 +27,21 @@ export default {
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/stylesheets/main.scss',
     'hooper/dist/hooper.css'
   ],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/slider.js'],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
+    '@aceforth/nuxt-optimized-images',
     '@nuxtjs/eslint-module'
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['nuxt-i18n'],
   i18n: {
     locales: [
@@ -65,11 +61,10 @@ export default {
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
-      onlyOnRoot: true // recommended
+      onlyOnRoot: true
     }
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {
       preset: {
@@ -77,6 +72,15 @@ export default {
           overrideBrowserslist: ['last 3 versions', '> 1%']
         }
       }
+    }
+  },
+
+  optimizedImages: {
+    optimizeImages: true,
+    responsive: {
+      sizes: [540, 720, 960, 1170],
+      placeholder: true,
+      placeholderSize: 20
     }
   }
 }

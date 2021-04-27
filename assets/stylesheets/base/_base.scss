@@ -9,6 +9,7 @@
   padding: 0;
   box-sizing: border-box;
   transition: all 0.2s linear;
+  font-feature-settings: "lnum";
 }
 
 a {
@@ -19,11 +20,14 @@ ul {
   list-style: none;
 }
 
-.page-enter-active, .page-leave-active, {
+.page-enter-active,
+.page-leave-active
+{
   transition: opacity .3s;
 }
 
-.page-enter, .page-leave-active {
+.page-enter,
+.page-leave-active {
   opacity: 0;
 }
 
