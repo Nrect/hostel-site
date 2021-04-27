@@ -29,7 +29,7 @@
       left: 0;
 
 
-      width: 70px;
+      width: 180px;
       height: 5px;
       border-radius: 5px;
       background: $--main;
@@ -117,6 +117,7 @@
 
       &:after {
         left: 50%;
+        width: 120px;
         transform: translateX(-50%);
       }
     }
