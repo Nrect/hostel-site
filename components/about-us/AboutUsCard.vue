@@ -4,7 +4,11 @@
       hooper(ref="carousel" :settings="hooperSettings").card-about__slider
         slide.card-about__slide(v-for="(img,i) in aboutImages" :key="i")
           .card-about__img
-            img(:src="img")
+            picture
+              source(type="image/webp" :srcSet="img.webp.srcSet")
+              source(type="image/avif" :srcSet="img.avif.srcSet")
+              source(type="image/jpeg" :srcSet="img.jpg.srcSet")
+              img(:src="img.jpg.src")
         hooper-navigation(slot="hooper-addons")
         hooper-pagination(slot="hooper-addons")
       .card-about__wrapper
@@ -26,11 +30,31 @@ export default {
     return {
       aboutImages: [
         // require('@/assets/images/about-us/1.jpg'),
-        require('@/assets/images/about-us/2.jpg'),
-        require('@/assets/images/about-us/3.jpg'),
-        require('@/assets/images/about-us/4.jpg'),
-        require('@/assets/images/about-us/5.jpg'),
-        require('@/assets/images/about-us/6.jpg')
+        {
+          jpg: require('@/assets/images/about-us/2.jpg?resize'),
+          webp: require('@/assets/images/about-us/2.jpg?resize&format=webp'),
+          avif: require('@/assets/images/about-us/2.jpg?resize&format=avif')
+        },
+        {
+          jpg: require('@/assets/images/about-us/3.jpg?resize'),
+          webp: require('@/assets/images/about-us/3.jpg?resize&format=webp'),
+          avif: require('@/assets/images/about-us/3.jpg?resize&format=avif')
+        },
+        {
+          jpg: require('@/assets/images/about-us/4.jpg?resize'),
+          webp: require('@/assets/images/about-us/4.jpg?resize&format=webp'),
+          avif: require('@/assets/images/about-us/4.jpg?resize&format=avif')
+        },
+        {
+          jpg: require('@/assets/images/about-us/5.jpg?resize'),
+          webp: require('@/assets/images/about-us/5.jpg?resize&format=webp'),
+          avif: require('@/assets/images/about-us/5.jpg?resize&format=avif')
+        },
+        {
+          jpg: require('@/assets/images/about-us/6.jpg?resize'),
+          webp: require('@/assets/images/about-us/6.jpg?resize&format=webp'),
+          avif: require('@/assets/images/about-us/6.jpg?resize&format=avif')
+        }
       ],
       advantages: [
         {
