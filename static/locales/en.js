@@ -5,7 +5,19 @@ export default {
     rooms: 'Rooms',
     services: 'Services',
     faq: 'FAQ',
-    contacts: 'Our Contacts'
+    contacts: 'Our Contacts',
+    subtitle: 'Welcome to the most modern and maritime hostel in Kaliningrad on the banks of the Pregolya River.'
+  },
+  showMore: 'Show more',
+  quote: {
+    title1: 'HOSTEL PALMBURG – A QUIET HAVEN AWAY FROM THE HUSTLE AND BUSTLE OF THE CITY',
+    description1: 'Here you will take a break from the "concrete jungle". Clean air and quietness of the suburb will welcome you if you decide to become our guest. We have already thought about you in advance, so you will feel at home. City bustle, hustle and bustle or marvelous sunsets by the water against the backdrop of yachts? The choice is yours alone.',
+    title2: 'Same',
+    description2: 'We offer equipped parking for guests in mobile homes, with connectivity and access to the hostel\'s infrastructure.'
+  },
+  serviceTypes: {
+    free: 'Free services',
+    paid: 'Paid services'
   },
   freeServices: {
     register24: '24/7 front desk',

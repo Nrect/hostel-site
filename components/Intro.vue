@@ -5,7 +5,7 @@
       .container
         .intro__content
           h1.intro__title {{ getPageName}}
-          p.intro__subtitle Добро пожаловать в самый морской и современный хостел Калининграда на берегу реки Преголя.
+          p.intro__subtitle {{ this.$t('introTitle').subtitle }}
 </template>
 
 <script>
