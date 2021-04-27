@@ -4,10 +4,12 @@
 
   border: 1px solid $--main;
 
-  a {
+  a, button {
     padding: 8px 26px;
 
     display: block;
+    width: 100%;
+    height: 100%;
     background: $--main;
     border: 1px solid $--white;
 
@@ -19,7 +21,7 @@
   &:hover {
     border: 1px solid $--black;
 
-    a {
+    a, button {
       background: $--black;
     }
   }
@@ -27,14 +29,14 @@
   &--secondary {
     border: 1px solid $--black;
 
-    a {
+    a, button {
       background: $--black;
     }
 
     &:hover {
       border: 1px solid $--main;
 
-      a {
+      a, button {
         background: $--main;
       }
     }

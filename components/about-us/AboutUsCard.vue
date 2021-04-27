@@ -30,6 +30,19 @@ export default {
     return {
       aboutImages: [
         // require('@/assets/images/about-us/1.jpg'),
+        // require('@/assets/images/about-us/2.jpg'),
+        // require('@/assets/images/about-us/3.jpg'),
+        // require('@/assets/images/about-us/4.jpg'),
+        // require('@/assets/images/about-us/5.jpg'),
+        // require('@/assets/images/about-us/6.jpg'),
+        // require('@/assets/images/about-us/7.jpg'),
+        // require('@/assets/images/about-us/8.jpg'),
+        // require('@/assets/images/about-us/9.jpg')
+        {
+          jpg: require('@/assets/images/about-us/1.jpg?resize'),
+          webp: require('@/assets/images/about-us/1.jpg?resize&format=webp'),
+          avif: require('@/assets/images/about-us/1.jpg?resize&format=avif')
+        },
         {
           jpg: require('@/assets/images/about-us/2.jpg?resize'),
           webp: require('@/assets/images/about-us/2.jpg?resize&format=webp'),
@@ -54,6 +67,21 @@ export default {
           jpg: require('@/assets/images/about-us/6.jpg?resize'),
           webp: require('@/assets/images/about-us/6.jpg?resize&format=webp'),
           avif: require('@/assets/images/about-us/6.jpg?resize&format=avif')
+        },
+        {
+          jpg: require('@/assets/images/about-us/7.jpg?resize'),
+          webp: require('@/assets/images/about-us/7.jpg?resize&format=webp'),
+          avif: require('@/assets/images/about-us/7.jpg?resize&f1ormat=avif')
+        },
+        {
+          jpg: require('@/assets/images/about-us/8.jpg?resize'),
+          webp: require('@/assets/images/about-us/8.jpg?resize&format=webp'),
+          avif: require('@/assets/images/about-us/8.jpg?resize&format=avif')
+        },
+        {
+          jpg: require('@/assets/images/about-us/9.jpg?resize'),
+          webp: require('@/assets/images/about-us/9.jpg?resize&format=webp'),
+          avif: require('@/assets/images/about-us/9.jpg?resize&format=avif')
         }
       ],
       advantages: [
@@ -76,11 +104,13 @@ export default {
     }
   },
   mounted () {
-    const svg = document.getElementsByClassName('icon')
-    for (let i = 0; i < svg.length; i++) {
-      svg[i].removeAttribute('width')
-      svg[i].removeAttribute('height')
-      svg[i].getElementsByTagName('path')[0].remove()
+    if (process.browser) {
+      const svg = document.getElementsByClassName('icon')
+      for (let i = 0; i < svg.length; i++) {
+        svg[i].removeAttribute('width')
+        svg[i].removeAttribute('height')
+        svg[i].getElementsByTagName('path')[0].remove()
+      }
     }
   }
 }
