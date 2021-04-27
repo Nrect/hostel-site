@@ -20,13 +20,14 @@
               span.card-about__btn.btn
                 nuxt-link(to="/rooms") Назад
               span.card-about__btn.btn.btn--secondary
-                nuxt-link(to="/") Забронировать
+                button(@click="toggleBookingModal") Забронировать
     .other-rooms
       app-rooms-section
 
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import { roomsData } from '~/content/rooms'
 import AppRoomsSection from '~/components/index/RoomsSection'
 
@@ -48,8 +49,8 @@ export default {
       return roomsData.find(room => room.slug === this.$route.params.id)
     }
   },
-  mounted () {
-    console.log(this.$route.params.id)
+  methods: {
+    ...mapActions('layout', ['toggleBookingModal'])
   }
 }
 </script>
