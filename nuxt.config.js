@@ -2,7 +2,7 @@ export default {
   target: 'static',
 
   head: {
-    title: 'hostel-palmburg',
+    title: 'Hostel Palmburg',
     htmlAttrs: {
       lang: 'en'
     },

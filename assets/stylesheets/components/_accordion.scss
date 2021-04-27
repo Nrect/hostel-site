@@ -1,7 +1,8 @@
 .accordion {
   &__tab {
     margin-bottom: 15px;
-    border: 1px solid $--gray;
+    border: 1px solid $--main-lighter;
+    background: $--gray;
     display: block;
 
     animation-name: slideDown;

@@ -49,6 +49,16 @@ export default {
       return roomsData.find(room => room.slug === this.$route.params.id)
     }
   },
+  mounted () {
+    if (process.browser) {
+      const svg = document.getElementsByClassName('icon')
+      for (let i = 0; i < svg.length; i++) {
+        svg[i].removeAttribute('width')
+        svg[i].removeAttribute('height')
+        svg[i].getElementsByTagName('path')[0].remove()
+      }
+    }
+  },
   methods: {
     ...mapActions('layout', ['toggleBookingModal'])
   }
