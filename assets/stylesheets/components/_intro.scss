@@ -3,9 +3,8 @@
 
   &--main {
     height: 970px;
-    background: $--black url("~assets/images/intro-bg.jpg") center no-repeat fixed;
+    background: $--black url("~assets/images/intro-bg.jpg?webp") center no-repeat fixed;
     background-size: cover;
-
 
     .intro__subtitle {
       display: block;
