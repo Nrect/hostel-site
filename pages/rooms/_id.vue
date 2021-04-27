@@ -49,7 +49,12 @@ export default {
     }
   },
   mounted () {
-    console.log(this.$route.params.id)
+    const svg = document.getElementsByClassName('icon')
+    for (let i = 0; i < svg.length; i++) {
+      svg[i].removeAttribute('width')
+      svg[i].removeAttribute('height')
+      svg[i].getElementsByTagName('path')[0].remove()
+    }
   }
 }
 </script>
