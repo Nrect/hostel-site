@@ -7,10 +7,12 @@
 
   &__wrapper {
     padding-top: 35px;
-    padding-bottom: 45px;
+    padding-bottom: 65px;
 
     @extend %display-flex;
     justify-content: space-around;
+
+    z-index: 2;
   }
 
   &__title {
@@ -75,6 +77,17 @@
     width: 34px;
     height: 24px;
     fill: $--main;
+  }
+
+  &__center-img {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 0;
+    transform: translateY(-40%);
+    background: url('http://lamaro.like-themes.com/wp-content/uploads/2018/02/footer-img.png') no-repeat center top;
   }
 
   &__bottom-img {

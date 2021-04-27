@@ -28,6 +28,7 @@
               use(xlink:href="#map-marker")
             p п. Прибрежное, ул. Южное полукольцо, 4
     .rope-border
+    .footer__center-img
     .footer__bottom-img
 </template>
 
