@@ -17,7 +17,7 @@
                 .card-about__contact
                   svg.card-about__contact-icon
                     use(xlink:href="#phone")
-                  a(href="tel:+74012374646") +7 (4012) 37-46-46 (городской)
+                  a(href="tel:+74012374646") {{ translate.phone }}
                 .card-about__contact
                   svg.card-about__contact-icon
                     use(xlink:href="#envelop")
@@ -25,7 +25,7 @@
                 .card-about__contact
                   svg.card-about__contact-icon
                     use(xlink:href="#map-marker")
-                  | Калининградская область, Гурьевский район, п. Прибрежное, ул. Южное полукольцо, 4
+                  | {{ translate.address }}
                 .card-about__contact
                   a(href="viber://chat?number=%2B79637384646" target="_blank")
                     svg.card-about__contact-icon
@@ -49,6 +49,11 @@ export default {
   data () {
     return {
       currentMap: 'google'
+    }
+  },
+  computed: {
+    translate () {
+      return this.$t('common')
     }
   }
 }
