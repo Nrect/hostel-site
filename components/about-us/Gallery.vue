@@ -99,7 +99,7 @@ export default {
       this.$refs.carousel1.slideNext()
     },
     checkSlideOption (aboutSlide) {
-      console.log(this.$refs.carousel1.containerWidth)
+      // console.log(this.$refs.carousel1.containerWidth)
       const slideCount = this.galleryImages.length - 3
       const nextButton = this.$refs.nextBtn
       const prevButton = this.$refs.prevBtn
