@@ -27,44 +27,44 @@ export default {
     return {
       galleryImages: [
         {
-          jpg: require('@/assets/images/about-us/1.jpg?resize'),
-          webp: require('@/assets/images/about-us/1.jpg?resize&format=webp'),
-          avif: require('@/assets/images/about-us/1.jpg?resize&format=avif')
+          jpg: require('@/assets/images/gallery/1.jpg?resize'),
+          webp: require('@/assets/images/gallery/1.jpg?resize&format=webp'),
+          avif: require('@/assets/images/gallery/1.jpg?resize&format=avif')
         },
         {
-          jpg: require('@/assets/images/about-us/2.jpg?resize'),
-          webp: require('@/assets/images/about-us/2.jpg?resize&format=webp'),
-          avif: require('@/assets/images/about-us/2.jpg?resize&format=avif')
+          jpg: require('@/assets/images/gallery/2.jpg?resize'),
+          webp: require('@/assets/images/gallery/2.jpg?resize&format=webp'),
+          avif: require('@/assets/images/gallery/2.jpg?resize&format=avif')
         },
         {
-          jpg: require('@/assets/images/about-us/3.jpg?resize'),
-          webp: require('@/assets/images/about-us/3.jpg?resize&format=webp'),
-          avif: require('@/assets/images/about-us/3.jpg?resize&format=avif')
+          jpg: require('@/assets/images/gallery/3.jpg?resize'),
+          webp: require('@/assets/images/gallery/3.jpg?resize&format=webp'),
+          avif: require('@/assets/images/gallery/3.jpg?resize&format=avif')
         },
         {
-          jpg: require('@/assets/images/about-us/4.jpg?resize'),
-          webp: require('@/assets/images/about-us/4.jpg?resize&format=webp'),
-          avif: require('@/assets/images/about-us/4.jpg?resize&format=avif')
+          jpg: require('@/assets/images/gallery/4.jpg?resize'),
+          webp: require('@/assets/images/gallery/4.jpg?resize&format=webp'),
+          avif: require('@/assets/images/gallery/4.jpg?resize&format=avif')
         },
         {
-          jpg: require('@/assets/images/about-us/5.jpg?resize'),
-          webp: require('@/assets/images/about-us/5.jpg?resize&format=webp'),
-          avif: require('@/assets/images/about-us/5.jpg?resize&format=avif')
+          jpg: require('@/assets/images/gallery/5.jpg?resize'),
+          webp: require('@/assets/images/gallery/5.jpg?resize&format=webp'),
+          avif: require('@/assets/images/gallery/5.jpg?resize&format=avif')
         },
         {
-          jpg: require('@/assets/images/about-us/6.jpg?resize'),
-          webp: require('@/assets/images/about-us/6.jpg?resize&format=webp'),
-          avif: require('@/assets/images/about-us/6.jpg?resize&format=avif')
+          jpg: require('@/assets/images/gallery/6.jpg?resize'),
+          webp: require('@/assets/images/gallery/6.jpg?resize&format=webp'),
+          avif: require('@/assets/images/gallery/6.jpg?resize&format=avif')
         },
         {
-          jpg: require('@/assets/images/about-us/7.jpg?resize'),
-          webp: require('@/assets/images/about-us/7.jpg?resize&format=webp'),
-          avif: require('@/assets/images/about-us/7.jpg?resize&format=avif')
+          jpg: require('@/assets/images/gallery/7.jpg?resize'),
+          webp: require('@/assets/images/gallery/7.jpg?resize&format=webp'),
+          avif: require('@/assets/images/gallery/7.jpg?resize&format=avif')
         },
         {
-          jpg: require('@/assets/images/about-us/8.jpg?resize'),
-          webp: require('@/assets/images/about-us/8.jpg?resize&format=webp'),
-          avif: require('@/assets/images/about-us/8.jpg?resize&format=avif')
+          jpg: require('@/assets/images/gallery/8.jpg?resize'),
+          webp: require('@/assets/images/gallery/8.jpg?resize&format=webp'),
+          avif: require('@/assets/images/gallery/8.jpg?resize&format=avif')
         }
       ],
       hooperSettings: {
@@ -95,9 +95,11 @@ export default {
       this.$refs.carousel1.slidePrev()
     },
     slideNext () {
+      // console.log(this.$refs.carousel1.containerWidth)
       this.$refs.carousel1.slideNext()
     },
     checkSlideOption (aboutSlide) {
+      // console.log(this.$refs.carousel1.containerWidth)
       const slideCount = this.galleryImages.length - 3
       const nextButton = this.$refs.nextBtn
       const prevButton = this.$refs.prevBtn
@@ -113,5 +115,6 @@ export default {
       }
     }
   }
+
 }
 </script>

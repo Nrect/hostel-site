@@ -50,15 +50,15 @@ export default {
     getRoomName (param) {
       switch (param) {
         case 'two-room':
-          return 'Двухместная каюта '
+          return 'ДВУХМЕСТНая Каюта «СТАНДАРТ'
         case 'six-room':
-          return '6 - местная каюта для женщин'
+          return 'ОБЩая 6 - МЕСТНая каюта'
         case 'eight-room':
-          return '8 - местная каюта для женщин'
+          return 'ЖЕНСКая 8 - МЕСТНая каюта'
         case 'ten-room':
-          return '10 - местная каюта для мужчин и женщин'
+          return 'ОБЩАЯ 10 - МЕСТНая каюта'
         case 'twelve-room':
-          return '12 - местная каюта для мужчин и женщин'
+          return 'ОБЩая 12 - МЕСТНая каюта'
       }
     },
     ...mapActions('layout', ['toggleBookingModal'])

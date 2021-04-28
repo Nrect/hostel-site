@@ -1,6 +1,6 @@
 <template lang="pug">
   .homepage
-    app-rooms-section
+    app-rooms-section(:title="'Каюты'")
     app-about-us
     app-faq-section
 </template>

@@ -22,7 +22,7 @@
               span.card-about__btn.btn.btn--secondary
                 button(@click="toggleBookingModal") Забронировать
     .other-rooms
-      app-rooms-section
+      app-rooms-section(:title="'Другие каюты'")
 
 </template>
 
@@ -34,9 +34,14 @@ import AppRoomsSection from '~/components/index/RoomsSection'
 export default {
   name: 'RoomId',
   components: { AppRoomsSection },
-  // validate ({ params }) {
-  //   return Boolean(categories.find(category => category.link === params.link && category.type === 'gates'))
-  // },
+  validate ({ params }) {
+    for (const room of roomsData) {
+      if (room.slug === params.id) {
+        return true
+      }
+    }
+    return false
+  },
   data () {
     return {
       hooperSettings: {
