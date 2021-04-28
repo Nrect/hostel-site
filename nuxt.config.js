@@ -52,6 +52,7 @@ export default {
 
   modules: ['nuxt-i18n'],
   i18n: {
+    strategy: 'prefix_except_default',
     locales: [
       {
         code: 'ru',

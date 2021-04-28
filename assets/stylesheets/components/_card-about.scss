@@ -80,6 +80,7 @@
   &__title {
     margin-bottom: 25px;
     text-align: center;
+    text-transform: uppercase;
   }
 
   &__text-title {
@@ -164,8 +165,8 @@
     }
 
     &__btn {
-      a {
-        padding: 15px 10px;
+      a, button {
+        padding: 10px;
       }
     }
 
