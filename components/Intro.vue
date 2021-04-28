@@ -1,14 +1,20 @@
 <template lang="pug">
-  .intro
+  .intro(:class="{'intro--main' :this.$route.name.slice(0, -5) === 'index'}")
     .rope-border
     .intro__wrapper
       .container
         .intro__content
-          h1.intro__title {{ getPageName}}
+          h1.intro__title {{ getPageName }}
+          p.intro__slug {{ this.$t('introTitle').indexSlug }}
           p.intro__subtitle {{ this.$t('introTitle').subtitle }}
+        .intro__footer
+          span.intro__btn.btn.btn--secondary
+            button(@click="toggleBookingModal") {{ this.$t('common').booking }}
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'AppIntro',
   data () {
@@ -54,7 +60,8 @@ export default {
         case 'twelve-room':
           return '12 - местная каюта для мужчин и женщин'
       }
-    }
+    },
+    ...mapActions('layout', ['toggleBookingModal'])
   }
 }
 </script>
