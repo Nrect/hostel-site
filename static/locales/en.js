@@ -1,6 +1,14 @@
 export default {
+  common: {
+    showMore: 'Show more',
+    learnMore: 'Learn more',
+    booking: 'Book now',
+    phone: '+7 (4012) 37-46-46 (urban)',
+    address: 'Kaliningrad region, Guryevsky district, Pribrezhnoe village, st. Southern half ring, 4'
+  },
   introTitle: {
-    index: 'HOSTEL PALMBURG – A QUIET HAVEN AWAY FROM THE HUSTLE AND BUSTLE OF THE CITY',
+    index: 'HOSTEL PALMBURG',
+    indexSlug: 'A QUIET HAVEN AWAY FROM THE HUSTLE AND BUSTLE OF THE CITY',
     aboutUs: 'About us',
     rooms: 'Rooms',
     services: 'Services',
@@ -8,7 +16,81 @@ export default {
     contacts: 'Our Contacts',
     subtitle: 'Welcome to the most modern and maritime hostel in Kaliningrad on the banks of the Pregolya River.'
   },
-  showMore: 'Show more',
+  footer: {
+    title: 'HOSTEL PALMBURG',
+    titleSlug: 'A QUIET HAVEN AWAY FROM THE HUSTLE AND BUSTLE OF THE CITY',
+    navigation: 'Navigation',
+    contacts: 'Our Contacts'
+  },
+  whyUs: {
+    title: 'Why us',
+    card1: {
+      title: 'Location',
+      content: 'We are located on the banks of the Pregolya River, in a quiet and picturesque place in our city.'
+    },
+    card2: {
+      title: 'Comfort',
+      content: 'In the recreation area, you can sit comfortably in a beanbag chair while watching a movie (at such venues as IVI, OKKO, Kinopoisk) or playing a game console.'
+    },
+    card3: {
+      title: 'Service',
+      content: 'Our team consists of young and responsive guys who are ready to help you spend a great time with us.'
+    }
+  },
+  faq: {
+    accordion1: {
+      title: 'Is it possible to bring children to the hostel?',
+      content: 'Staying at the hostel is possible with children from 7 years old, while they are accommodated in a separate bed.'
+    },
+    accordion2: {
+      title: 'Do you provide bed linen and towels?',
+      content: 'Bed linen and 2 towels for each guest are included in the price.'
+    },
+    accordion3: {
+      title: 'How often are rooms cleaned?',
+      content: 'Living rooms and common areas are cleaned daily. Scheduled bed linen change every 5 days.'
+    },
+    accordion4: {
+      title: 'Until what time can you check in?',
+      content: 'Check-in takes place from 2 pm. The reception is open around the clock.'
+    },
+    accordion5: {
+      title: 'Are pets allowed?',
+      content: 'Unfortunately, pets are not allowed.'
+    },
+    accordion6: {
+      title: 'Is there a safe in the hostel for the safety of valuables?',
+      content: 'Each multi-bed room has an individual locker (locker) with access by the guest\'s key card.'
+    },
+    accordion7: {
+      title: 'Can I check into the hostel at night?',
+      content: 'The hostel\'s reception is open around the clock, you can come to us at any time.'
+    }
+  },
+  aboutUs: {
+    title: 'HOSTEL PALMBURG – A QUIET HAVEN AWAY FROM THE HUSTLE AND BUSTLE OF THE CITY',
+    content: [
+      'Welcome to the most modern and maritime hostel in Kaliningrad on the banks of the Pregolya River.',
+      'We are the Hostel Palmburg team!',
+      'Here you will take a break from the "concrete jungle". Clean air and quietness of the suburb will welcome you if you decide to become our guest. We have already thought about you in advance, so you will feel at home. City bustle, hustle and bustle or marvelous sunsets by the water against the backdrop of yachts? The choice is yours alone.'
+    ],
+    advantagesTitle: 'Why us?',
+    advantages: [
+      {
+        title: '1. Location',
+        description: 'The name "Palmburg" (from German - "Palm City") comes from the name of an estate with agricultural production, located next to the bridge. The owner of the estate grew exotic plants in greenhouses, among which were palms. We are located on the banks of the Pregolya River, in a quiet and picturesque place in our city. On the territory there is a fish restaurant "Skipper" and a yacht club "Marina Palmburg". There is a bus stop 50 m from us.'
+      },
+      {
+        title: '2. Comfort',
+        description: 'The interior is made in a nautical style: doors with a porthole, vest curtains, seagull-shaped lamps, walls are painted with drawings on the appropriate theme, etc. In the recreation area, you can sit comfortably in a beanbag chair while watching a movie (at such venues as IVI, OKKO, Kinopoisk) or playing a game console. All rooms have individual lockers with locks for clothes and a separate locker for suitcases. The beds are equipped with sockets, a night light, a shelf and a clothes hanger. The kitchen is fully equipped for preparing delicious meals. There is also a washer and dryer so you can travel light. On the street you can use the gazebo with barbecue. For children, we have a playground and a beautiful lawn for playing during the warm season.'
+      },
+      {
+        title: '3. Service',
+        description: 'Our team consists of young and responsive guys who are ready to help you spend a great time with us. Organize an excursion, transfer, evening leisure, answer all your questions for us only for happiness. We are always clean! Our administrators monitor the cleanliness around the clock. Our doors are always open for you.'
+      }
+    ],
+    galleryTitle: 'Gallery'
+  },
   quote: {
     title1: 'HOSTEL PALMBURG – A QUIET HAVEN AWAY FROM THE HUSTLE AND BUSTLE OF THE CITY',
     description1: 'Here you will take a break from the "concrete jungle". Clean air and quietness of the suburb will welcome you if you decide to become our guest. We have already thought about you in advance, so you will feel at home. City bustle, hustle and bustle or marvelous sunsets by the water against the backdrop of yachts? The choice is yours alone.',
