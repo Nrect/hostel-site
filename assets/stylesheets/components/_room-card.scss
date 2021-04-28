@@ -17,6 +17,9 @@
 
   &__wrapper {
     padding: 30px 30px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__img {
