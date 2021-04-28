@@ -1,5 +1,5 @@
 <template lang="pug">
-  .intro(:class="{'intro--main' :this.$route.name.slice(0, -5) === 'index'}")
+  .intro(:class="getIntroClass")
     .rope-border
     .intro__wrapper
       .container
@@ -30,19 +30,37 @@ export default {
         case 'index':
           return this.$t('introTitle.index')
         case 'about-us':
-          return this.$t('introTitle').aboutUs
+          return this.$t('introTitle.aboutUs')
         case 'rooms':
-          return this.$t('introTitle').rooms
+          return this.$t('introTitle.rooms')
         case 'services':
-          return this.$t('introTitle').services
+          return this.$t('introTitle.services')
         case 'faq':
-          return this.$t('introTitle').faq
+          return this.$t('introTitle.faq')
         case 'contacts':
-          return this.$t('introTitle').contacts
+          return this.$t('introTitle.contacts')
         case 'rooms-id':
           return this.getRoomName(routeParam)
         default:
           return routeName
+      }
+    },
+    getIntroClass () {
+      switch (this.$route.name.slice(0, -5)) {
+        case 'index':
+          return 'intro--main'
+        case 'about-us':
+          return 'intro--about'
+        case 'rooms':
+          return 'intro--rooms'
+        case 'services':
+          return 'intro--services '
+        case 'faq':
+          return 'intro--faq'
+        case 'contacts':
+          return 'intro--contacts '
+        default:
+          return true
       }
     }
   },
