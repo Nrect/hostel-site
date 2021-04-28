@@ -3,7 +3,7 @@
 
   &--main {
     height: 970px;
-    background: $--black url("~assets/images/intro-bg.jpg?webp") center no-repeat fixed;
+    background: $--black url("~assets/images/bg/bg3.jpg?webp") center no-repeat fixed;
     background-size: cover;
 
     .intro__subtitle {
@@ -27,8 +27,28 @@
 
   width: 100%;
   height: 705px;
-  background: $--black url("~assets/images/bg2.jpg") left bottom no-repeat fixed;
+  background: $--black center no-repeat fixed;
   background-size: cover;
+
+  &--about {
+    background-image: url("~assets/images/bg/bg6.jpg?webp");
+  }
+
+  &--rooms {
+    background-image: url("~assets/images/bg/bg5.jpg?webp");
+  }
+
+  &--services {
+    background-image: url("~assets/images/bg/bg8.jpg?webp");
+  }
+
+  &--faq {
+    background-image: url("~assets/images/bg/bg10.jpg?webp");
+  }
+
+  &--contacts {
+    background-image: url("~assets/images/bg/bg1.jpg?webp");
+  }
 
   &:after {
     content: '';
