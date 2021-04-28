@@ -13,7 +13,7 @@
                   h3.room-card__title {{room.title}}
                   .room-card__description {{room.content}}
                   span.room-card__btn.btn
-                    nuxt-link(:to="'/rooms/'+ room.slug" ) Подробнее
+                    nuxt-link(:to="'/rooms/'+ room.slug" ) {{ translate.learnMore }}
         .card-slider__buttons
           button(@click.prevent="slidePrev" ref="prevBtn").card-slider__btn
             span
@@ -69,6 +69,9 @@ export default {
     rooms () {
       const routeParam = this.$route.params.id ? this.$route.params.id : ''
       return roomsData.filter(room => room.slug !== routeParam)
+    },
+    translate () {
+      return this.$t('common')
     }
   },
   methods: {

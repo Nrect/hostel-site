@@ -17,9 +17,9 @@
                 .rooms-card__description {{room.content}}
                 .rooms-card__buttons
                   span.rooms-card__btn.btn
-                    nuxt-link(:to="'/rooms/'+room.slug") Подробнее
+                    nuxt-link(:to="'/rooms/'+room.slug") {{ translate.learnMore }}
                   span.rooms-card__btn.btn.btn--secondary
-                    button(@click="toggleBookingModal") Забронировать
+                    button(@click="toggleBookingModal") {{ translate.booking }}
 </template>
 
 <script>
@@ -31,6 +31,9 @@ export default {
   computed: {
     rooms () {
       return roomsData
+    },
+    translate () {
+      return this.$t('common')
     }
   },
   methods: { ...mapActions('layout', ['toggleBookingModal']) }
