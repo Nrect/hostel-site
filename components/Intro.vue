@@ -22,7 +22,7 @@ export default {
       const routeParam = this.$route.params.id
       switch (routeName) {
         case 'index':
-          return this.$t('introTitle').index
+          return this.$t('introTitle.index')
         case 'about-us':
           return this.$t('introTitle').aboutUs
         case 'rooms':
