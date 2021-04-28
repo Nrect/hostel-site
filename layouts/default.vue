@@ -2,7 +2,7 @@
   div
     AppSprites
     AppHeader
-    app-intro(:class="{'intro--main' :this.$route.name.slice(0, -5) === 'index'}")
+    app-intro
     Nuxt
     app-footer
     booking-modal

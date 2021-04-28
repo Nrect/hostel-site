@@ -1,7 +1,7 @@
 <template lang="pug">
   .gallery
     .wrapper
-      h2.title Галерея
+      h2.title {{ translate.galleryTitle }}
       hooper.gallery__slider(ref="carousel1" :settings="hooperSettings" @slide="checkSlideOption")
         slide(v-for="(img,i) in galleryImages" :key="i").gallery__slide
           .gallery__img
@@ -83,6 +83,11 @@ export default {
           }
         }
       }
+    }
+  },
+  computed: {
+    translate () {
+      return this.$t('aboutUs')
     }
   },
   methods: {
