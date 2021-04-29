@@ -9,7 +9,11 @@
               .room-card
                 .room-card__wrapper
                   .room-card__img
-                    img(:src="room.imgSrc")
+                    picture
+                      source(type="image/webp" :srcSet="room.imgSrc.webp.srcSet")
+                      source(type="image/avif" :srcSet="room.imgSrc.avif.srcSet")
+                      source(type="image/jpeg" :srcSet="room.imgSrc.jpg.srcSet")
+                      img(:src="room.imgSrc")
                   h3.room-card__title {{room.title[actualLocale]}}
                   .room-card__description {{room.content[actualLocale]}}
                   span.room-card__btn.btn

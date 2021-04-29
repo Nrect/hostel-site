@@ -1,7 +1,11 @@
 export const roomsData = [
   {
     slug: 'two-room',
-    imgSrc: require('~/assets/images/room2/1.jpg'),
+    imgSrc: {
+      jpg: require('@/assets/images/room2/1.jpg?resize'),
+      webp: require('@/assets/images/room2/1.jpg?resize&format=webp'),
+      avif: require('@/assets/images/room2/1.jpg?resize&format=avif')
+    },
     title: {
       ru: 'ДВУХМЕСТНая Каюта «СТАНДАРТ»',
       en: 'Double Cabin «STANDARD»'
@@ -49,12 +53,36 @@ export const roomsData = [
       }
     ],
     imageSet: [
-      require('~/assets/images/room2/1.jpg'),
-      require('~/assets/images/room2/2.jpg'),
-      require('@/assets/images/room2/3.jpg'),
-      require('@/assets/images/room2/4.jpg'),
-      require('@/assets/images/room2/5.jpg'),
-      require('@/assets/images/room2/6.jpg')
+      {
+        jpg: require('@/assets/images/room2/1.jpg?resize'),
+        webp: require('@/assets/images/room2/1.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room2/1.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room2/2.jpg?resize'),
+        webp: require('@/assets/images/room2/2.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room2/2.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room2/3.jpg?resize'),
+        webp: require('@/assets/images/room2/3.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room2/3.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room2/4.jpg?resize'),
+        webp: require('@/assets/images/room2/4.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room2/4.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room2/5.jpg?resize'),
+        webp: require('@/assets/images/room2/5.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room2/5.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room2/6.jpg?resize'),
+        webp: require('@/assets/images/room2/6.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room2/6.jpg?resize&format=avif')
+      }
     ],
     additionContent: [
       {
@@ -65,7 +93,11 @@ export const roomsData = [
   },
   {
     slug: 'six-room',
-    imgSrc: require('@/assets/images/room6/1.jpg'),
+    imgSrc: {
+      jpg: require('@/assets/images/room6/1.jpg?resize'),
+      webp: require('@/assets/images/room6/1.jpg?resize&format=webp'),
+      avif: require('@/assets/images/room6/1.jpg?resize&format=avif')
+    },
     title: {
       ru: 'ОБЩая 6 - МЕСТНая каюта',
       en: 'Shared 6-bed cabin'
@@ -105,12 +137,36 @@ export const roomsData = [
       }
     ],
     imageSet: [
-      require('@/assets/images/room6/1.jpg'),
-      require('@/assets/images/room6/2.jpg'),
-      require('@/assets/images/room6/3.jpg'),
-      require('@/assets/images/room6/4.jpg'),
-      require('@/assets/images/room6/5.jpg'),
-      require('@/assets/images/room6/6.jpg')
+      {
+        jpg: require('@/assets/images/room6/1.jpg?resize'),
+        webp: require('@/assets/images/room6/1.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room6/1.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room6/2.jpg?resize'),
+        webp: require('@/assets/images/room6/2.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room6/2.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room6/3.jpg?resize'),
+        webp: require('@/assets/images/room6/3.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room6/3.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room6/4.jpg?resize'),
+        webp: require('@/assets/images/room6/4.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room6/4.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room6/5.jpg?resize'),
+        webp: require('@/assets/images/room6/5.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room6/5.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room6/6.jpg?resize'),
+        webp: require('@/assets/images/room6/6.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room6/6.jpg?resize&format=avif')
+      }
     ],
     additionContent: [{
       ru: 'К услугам гостей просторные общие душевые и туалеты, полностью укомплектованная кухня, зона отдыха с настольными играми и игровой консолью.',
@@ -119,7 +175,11 @@ export const roomsData = [
   },
   {
     slug: 'eight-room',
-    imgSrc: require('@/assets/images/room8/1.jpg'),
+    imgSrc: {
+      jpg: require('@/assets/images/room8/1.jpg?resize'),
+      webp: require('@/assets/images/room8/1.jpg?resize&format=webp'),
+      avif: require('@/assets/images/room8/1.jpg?resize&format=avif')
+    },
     title: {
       ru: 'ЖЕНСКая 8 - МЕСТНая каюта',
       en: 'Women\'s 8-bed cabin'
@@ -160,12 +220,36 @@ export const roomsData = [
       }
     ],
     imageSet: [
-      require('@/assets/images/room8/1.jpg'),
-      require('@/assets/images/room8/2.jpg'),
-      require('@/assets/images/room8/3.jpg'),
-      require('@/assets/images/room8/4.jpg'),
-      require('@/assets/images/room8/5.jpg'),
-      require('@/assets/images/room8/6.jpg')
+      {
+        jpg: require('@/assets/images/room8/1.jpg?resize'),
+        webp: require('@/assets/images/room8/1.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room8/1.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room8/2.jpg?resize'),
+        webp: require('@/assets/images/room8/2.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room8/2.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room8/3.jpg?resize'),
+        webp: require('@/assets/images/room8/3.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room8/3.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room8/4.jpg?resize'),
+        webp: require('@/assets/images/room8/4.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room8/4.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room8/5.jpg?resize'),
+        webp: require('@/assets/images/room8/5.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room8/5.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room8/6.jpg?resize'),
+        webp: require('@/assets/images/room8/6.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room8/6.jpg?resize&format=avif')
+      }
     ],
     additionContent: [{
       ru: 'К услугам гостей просторные общие душевые и туалеты, полностью укомплектованная кухня, зона отдыха с настольными играми и игровой консолью',
@@ -174,7 +258,11 @@ export const roomsData = [
   },
   {
     slug: 'ten-room',
-    imgSrc: require('@/assets/images/room10/1.jpg'),
+    imgSrc: {
+      jpg: require('@/assets/images/room10/1.jpg?resize'),
+      webp: require('@/assets/images/room10/1.jpg?resize&format=webp'),
+      avif: require('@/assets/images/room10/1.jpg?resize&format=avif')
+    },
     title: {
       ru: 'ОБЩАЯ 10 - МЕСТНая каюта',
       en: 'SHARED 10-BED cabin'
@@ -214,11 +302,31 @@ export const roomsData = [
       }
     ],
     imageSet: [
-      require('@/assets/images/room10/1.jpg'),
-      require('@/assets/images/room10/2.jpg'),
-      require('@/assets/images/room10/3.jpg'),
-      require('@/assets/images/room10/4.jpg'),
-      require('@/assets/images/room10/5.jpg')
+      {
+        jpg: require('@/assets/images/room10/1.jpg?resize'),
+        webp: require('@/assets/images/room10/1.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room10/1.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room10/2.jpg?resize'),
+        webp: require('@/assets/images/room10/2.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room10/2.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room10/3.jpg?resize'),
+        webp: require('@/assets/images/room10/3.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room10/3.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room10/4.jpg?resize'),
+        webp: require('@/assets/images/room10/4.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room10/4.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room10/5.jpg?resize'),
+        webp: require('@/assets/images/room10/5.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room10/5.jpg?resize&format=avif')
+      }
     ],
     additionContent: [{
       ru: 'К услугам гостей просторные общие душевые и туалеты, полностью укомплектованная кухня, зона отдыха с настольными играми и игровой консолью.',
@@ -227,7 +335,11 @@ export const roomsData = [
   },
   {
     slug: 'twelve-room',
-    imgSrc: require('@/assets/images/room12/1.jpg'),
+    imgSrc: {
+      jpg: require('@/assets/images/room12/1.jpg?resize'),
+      webp: require('@/assets/images/room12/1.jpg?resize&format=webp'),
+      avif: require('@/assets/images/room12/1.jpg?resize&format=avif')
+    },
     title: {
       ru: 'ОБЩая 12 - МЕСТНая каюта',
       en: 'Shared 12-bed cabin'
@@ -267,13 +379,41 @@ export const roomsData = [
       }
     ],
     imageSet: [
-      require('@/assets/images/room12/1.jpg'),
-      require('@/assets/images/room12/2.jpg'),
-      require('@/assets/images/room12/3.jpg'),
-      require('@/assets/images/room12/4.jpg'),
-      require('@/assets/images/room12/5.jpg'),
-      require('@/assets/images/room12/6.jpg'),
-      require('@/assets/images/room12/7.jpg')
+      {
+        jpg: require('@/assets/images/room12/1.jpg?resize'),
+        webp: require('@/assets/images/room12/1.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room12/1.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room12/2.jpg?resize'),
+        webp: require('@/assets/images/room12/2.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room12/2.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room12/3.jpg?resize'),
+        webp: require('@/assets/images/room12/3.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room12/3.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room12/4.jpg?resize'),
+        webp: require('@/assets/images/room12/4.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room12/4.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room12/5.jpg?resize'),
+        webp: require('@/assets/images/room12/5.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room12/5.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room12/6.jpg?resize'),
+        webp: require('@/assets/images/room12/6.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room12/6.jpg?resize&format=avif')
+      },
+      {
+        jpg: require('@/assets/images/room12/7.jpg?resize'),
+        webp: require('@/assets/images/room12/7.jpg?resize&format=webp'),
+        avif: require('@/assets/images/room12/7.jpg?resize&format=avif')
+      }
     ],
     additionContent: [{
       ru: 'К услугам гостей просторные общие душевые и туалеты, полностью укомплектованная кухня, зона отдыха с настольными играми и игровой консолью.',

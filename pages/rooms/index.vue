@@ -11,7 +11,11 @@
               //  hooper-navigation(slot="hooper-addons")
               //  hooper-pagination(slot="hooper-addons")
               .rooms-card__img
-                img(:src="room.imgSrc")
+                picture
+                  source(type="image/webp" :srcSet="room.imgSrc.webp.srcSet")
+                  source(type="image/avif" :srcSet="room.imgSrc.avif.srcSet")
+                  source(type="image/jpeg" :srcSet="room.imgSrc.jpg.srcSet")
+                  img(:src="room.imgSrc")
               .rooms-card__wrapper
                 h3.rooms-card__title {{room.title[actualLocale]}}
                 .rooms-card__description {{room.content[actualLocale]}}
