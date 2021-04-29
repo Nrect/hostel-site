@@ -50,6 +50,31 @@
     background-image: url("~assets/images/bg/bg1.jpg");
   }
 
+  &--two-room {
+    background-image: url("~assets/images/bg/bgr2.jpg");
+    background-position: left bottom;
+  }
+
+  &--six-room {
+    background-image: url("~assets/images/bg/bgr6.jpg");
+    background-position: left bottom;
+  }
+
+  &--eight-room {
+    background-image: url("~assets/images/bg/bgr8.jpg");
+    background-position: left bottom;
+  }
+
+  &--ten-room {
+    background-image: url("~assets/images/bg/bgr10.jpg");
+    background-position: left bottom;
+  }
+
+  &--twelve-room {
+    background-image: url("~assets/images/bg/bgr12.jpg");
+    background-position: left bottom;
+  }
+
   &:after {
     content: '';
     width: 100%;
