@@ -13,7 +13,7 @@
                   h3.room-card__title {{room.title}}
                   .room-card__description {{room.content}}
                   span.room-card__btn.btn
-                    nuxt-link(:to="'/rooms/'+ room.slug" ) {{ translate.learnMore }}
+                    nuxt-link(:to="localePath('/rooms/'+ room.slug)" ) {{ translate.learnMore }}
         .card-slider__buttons
           button(@click.prevent="slidePrev" ref="prevBtn").card-slider__btn
             span

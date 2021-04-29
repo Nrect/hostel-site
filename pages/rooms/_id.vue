@@ -18,9 +18,9 @@
               p.card-about__text(v-for="(content,idx) in room.additionContent" :key="idx") {{content}}
             .card-about__buttons
               span.card-about__btn.btn
-                nuxt-link(to="/rooms") Назад
+                nuxt-link(:to="localePath('/rooms')") {{translate.back}}
               span.card-about__btn.btn.btn--secondary
-                button(@click="toggleBookingModal") Забронировать
+                button(@click="toggleBookingModal") {{translate.booking}}
     .other-rooms
       app-rooms-section(:title="'Другие каюты'")
 
@@ -52,6 +52,9 @@ export default {
   computed: {
     room () {
       return roomsData.find(room => room.slug === this.$route.params.id)
+    },
+    translate () {
+      return this.$t('common')
     }
   },
   mounted () {

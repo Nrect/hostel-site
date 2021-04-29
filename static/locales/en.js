@@ -3,6 +3,8 @@ export default {
     showMore: 'Show more',
     learnMore: 'Learn more',
     booking: 'Book now',
+    availability: 'Show availability',
+    back: 'Back',
     phone: '+7 (4012) 37-46-46 (urban)',
     address: 'Kaliningrad region, Guryevsky district, Pribrezhnoe village, st. Southern half ring, 4'
   },
@@ -89,7 +91,9 @@ export default {
         description: 'Our team consists of young and responsive guys who are ready to help you spend a great time with us. Organize an excursion, transfer, evening leisure, answer all your questions for us only for happiness. We are always clean! Our administrators monitor the cleanliness around the clock. Our doors are always open for you.'
       }
     ],
-    galleryTitle: 'Gallery'
+    galleryTitle: 'Gallery',
+    living: 'Residential Matters',
+    contactsUs: 'Contacts'
   },
   quote: {
     title1: 'HOSTEL PALMBURG – A QUIET HAVEN AWAY FROM THE HUSTLE AND BUSTLE OF THE CITY',

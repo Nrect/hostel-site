@@ -21,6 +21,11 @@
         .card-about__content(v-for="(advantage,idx) in translate.advantages" :key="idx")
           h3.card-about__text-title {{advantage.title}}
           p.card-about__text {{advantage.description}}
+        .card-about__buttons
+          span.card-about__btn.btn
+            nuxt-link(:to="localePath('/faq')") {{ translate.living }}
+          span.card-about__btn.btn.btn--secondary
+            nuxt-link(:to="localePath('/contacts')") {{ translate.contactsUs }}
 </template>
 
 <script>
@@ -29,15 +34,6 @@ export default {
   data () {
     return {
       aboutImages: [
-        // require('@/assets/images/about-us/1.jpg'),
-        // require('@/assets/images/about-us/2.jpg'),
-        // require('@/assets/images/about-us/3.jpg'),
-        // require('@/assets/images/about-us/4.jpg'),
-        // require('@/assets/images/about-us/5.jpg'),
-        // require('@/assets/images/about-us/6.jpg'),
-        // require('@/assets/images/about-us/7.jpg'),
-        // require('@/assets/images/about-us/8.jpg'),
-        // require('@/assets/images/about-us/9.jpg')
         {
           jpg: require('@/assets/images/about-us/1.jpg?resize'),
           webp: require('@/assets/images/about-us/1.jpg?resize&format=webp'),

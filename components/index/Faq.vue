@@ -5,7 +5,7 @@
         h2.title FAQ
         app-accordion(:accordionContent="questions")
         span.btn.btn--secondary.btn--section
-          nuxt-link(to="/faq") {{ this.$t('common').showMore }}
+          nuxt-link(:to="localePath('/faq')") {{ this.$t('common').showMore }}
 </template>
 
 <script>

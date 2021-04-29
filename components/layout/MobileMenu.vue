@@ -10,7 +10,7 @@
         span ×
       ul.mobile-menu__list
         li(v-for='(link,index) in links' :key="index")
-          nuxt-link.mobile-menu__link(:to="link.path" exact @click.native="isMenuActive = !isMenuActive") {{link.name}}
+          nuxt-link.mobile-menu__link(:to="localePath(link.path)" exact @click.native="isMenuActive = !isMenuActive") {{link.name}}
 </template>
 
 <script>

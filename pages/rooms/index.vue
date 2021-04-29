@@ -17,7 +17,7 @@
                 .rooms-card__description {{room.content}}
                 .rooms-card__buttons
                   span.rooms-card__btn.btn
-                    nuxt-link(:to="'/rooms/'+room.slug") {{ translate.learnMore }}
+                    nuxt-link(:to="localePath('/rooms/'+room.slug)") {{ translate.learnMore }}
                   span.rooms-card__btn.btn.btn--secondary
                     button(@click="toggleBookingModal") {{ translate.booking }}
 </template>
