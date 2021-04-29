@@ -28,7 +28,7 @@ export default {
       try {
         routeName = this.$route.name.slice(0, -5)
       } catch (e) {
-        return 'An error occurred'
+        return 'An error has occurred'
       }
       const routeParam = this.$route.params.id
       switch (routeName) {
@@ -51,7 +51,13 @@ export default {
       }
     },
     getIntroClass () {
-      switch (this.$route.name.slice(0, -5)) {
+      let routeName = ''
+      try {
+        routeName = this.$route.name.slice(0, -5)
+      } catch (e) {
+        return 'intro--error-page'
+      }
+      switch (routeName) {
         case 'index':
           return 'intro--main'
         case 'about-us':
@@ -65,7 +71,7 @@ export default {
         case 'contacts':
           return 'intro--contacts '
         default:
-          return true
+          return 'intro--error-page'
       }
     }
   },
@@ -83,7 +89,7 @@ export default {
         case 'twelve-room':
           return this.$t('roomsTitles.titleTwelve')
         default:
-          return 'An error occurred'
+          return 'An error has occurred'
       }
     },
     ...mapActions('layout', ['toggleBookingModal'])
