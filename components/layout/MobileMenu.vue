@@ -5,12 +5,13 @@
       span.burger-btn__middle-bar
       span.burger-btn__bottom-bar
     nav.mobile-menu__nav
-      app-logo
+      .div(@click="isMenuActive = !isMenuActive")
+        app-logo
       button.mobile-menu__btn-close(@click="isMenuActive = !isMenuActive")
         span ×
       ul.mobile-menu__list
         li(v-for='(link,index) in links' :key="index")
-          nuxt-link.mobile-menu__link(:to="link.path" exact @click.native="isMenuActive = !isMenuActive") {{link.name}}
+          nuxt-link.mobile-menu__link(:to="localePath(link.path)" exact @click.native="isMenuActive = !isMenuActive") {{link.name[actualLocale]}}
 </template>
 
 <script>
@@ -34,6 +35,9 @@ export default {
         'mobile-menu': !this.isMenuActive,
         'mobile-menu--active': this.isMenuActive
       }
+    },
+    actualLocale () {
+      return this.$i18n.locale
     }
   }
 }

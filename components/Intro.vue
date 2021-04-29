@@ -68,15 +68,15 @@ export default {
     getRoomName (param) {
       switch (param) {
         case 'two-room':
-          return 'ДВУХМЕСТНая Каюта «СТАНДАРТ'
+          return this.$t('roomsTitles.titleTwo')
         case 'six-room':
-          return 'ОБЩая 6 - МЕСТНая каюта'
+          return this.$t('roomsTitles.titleSix')
         case 'eight-room':
-          return 'ЖЕНСКая 8 - МЕСТНая каюта'
+          return this.$t('roomsTitles.titleEight')
         case 'ten-room':
-          return 'ОБЩАЯ 10 - МЕСТНая каюта'
+          return this.$t('roomsTitles.titleTen')
         case 'twelve-room':
-          return 'ОБЩая 12 - МЕСТНая каюта'
+          return this.$t('roomsTitles.titleTwelve')
       }
     },
     ...mapActions('layout', ['toggleBookingModal'])

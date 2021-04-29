@@ -2,6 +2,7 @@
   .faq
     .container
       .wrapper
+        div {{actualLocale}}
         app-accordion(:accordionContent="questions")
 </template>
 
