@@ -14,7 +14,9 @@
     "core-js": "^3.9.1",
     "hooper": "^0.3.4",
     "nuxt": "^2.15.3",
-    "nuxt-i18n": "^6.26.0"
+    "nuxt-i18n": "^6.26.0",
+    "vue": "^2.6.12",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.4.0",

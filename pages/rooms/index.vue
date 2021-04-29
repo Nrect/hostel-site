@@ -11,18 +11,23 @@
               //  hooper-navigation(slot="hooper-addons")
               //  hooper-pagination(slot="hooper-addons")
               .rooms-card__img
-                img(:src="room.imgSrc")
+                picture
+                  source(type="image/webp" :srcSet="room.imgSrc.webp.srcSet")
+                  source(type="image/avif" :srcSet="room.imgSrc.avif.srcSet")
+                  source(type="image/jpeg" :srcSet="room.imgSrc.jpg.srcSet")
+                  img(:src="room.imgSrc")
               .rooms-card__wrapper
-                h3.rooms-card__title {{room.title}}
-                .rooms-card__description {{room.content}}
+                h3.rooms-card__title {{room.title[actualLocale]}}
+                .rooms-card__description {{room.content[actualLocale]}}
                 .rooms-card__buttons
                   span.rooms-card__btn.btn
-                    nuxt-link(:to="'/rooms/'+room.slug") Подробнее
+                    nuxt-link(:to="localePath('/rooms/'+room.slug)") {{ translate.learnMore }}
                   span.rooms-card__btn.btn.btn--secondary
-                    nuxt-link(to="/") Забронировать
+                    button(@click="toggleBookingModal") {{ translate.booking }}
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import { roomsData } from '~/content/rooms'
 
 export default {
@@ -30,7 +35,14 @@ export default {
   computed: {
     rooms () {
       return roomsData
+    },
+    translate () {
+      return this.$t('common')
+    },
+    actualLocale () {
+      return this.$i18n.locale
     }
-  }
+  },
+  methods: { ...mapActions('layout', ['toggleBookingModal']) }
 }
 </script>

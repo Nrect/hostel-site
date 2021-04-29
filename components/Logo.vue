@@ -1,6 +1,6 @@
 <template lang="pug">
   .logo
-    nuxt-link(to="/")
+    nuxt-link(:to="localePath('/')")
       img.logo__img(src="@/assets/images/logo_hostel.svg")
 </template>
 

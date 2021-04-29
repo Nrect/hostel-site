@@ -2,7 +2,7 @@ export default {
   target: 'static',
 
   head: {
-    title: 'hostel-palmburg',
+    title: 'Hostel Palmburg',
     htmlAttrs: {
       lang: 'en'
     },
@@ -24,6 +24,14 @@ export default {
         type: 'image/x-icon',
         href: '/favicon.ico'
       }
+    ],
+    script: [
+      {
+        src: '//widget.reservationsteps.ru/js/bnovo.js'
+      },
+      {
+        src: '/booking.js'
+      }
     ]
   },
 
@@ -44,6 +52,7 @@ export default {
 
   modules: ['nuxt-i18n'],
   i18n: {
+    strategy: 'prefix_except_default',
     locales: [
       {
         code: 'ru',

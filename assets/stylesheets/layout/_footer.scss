@@ -51,7 +51,7 @@
   }
 
   &__contact > p, &__contact > a {
-    padding: 7px 8px 7px;
+    padding: 7px 0 7px 8px;
     max-width: 210px;
 
     display: block;
@@ -71,6 +71,49 @@
   &__contact {
     display: flex !important;
     align-items: center;
+    //justify-content: space-around;
+
+    //&:last-child {
+    //  padding-top: 12px;
+    //  svg {
+    //    width: 50px;
+    //    height: 50px;
+    //  }
+    //}
+
+
+    a[target="_blank"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__subLogo {
+    text-align: center;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    line-height: 21px;
+    max-width: 210px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+  }
+
+  &__slug {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  &__btn {
+    z-index: 10;
+    margin-top: 10px;
+
+    button {
+      font-size: 15px !important;
+      padding: 15px 40px !important;
+      cursor: pointer;
+    }
   }
 
   &__contact-icon {
@@ -120,6 +163,19 @@
         width: 120px;
         transform: translateX(-50%);
       }
+    }
+
+    &__logo {
+      width: 270px;
+    }
+
+    &__subtitle, &__slug {
+      display: none;
+    }
+
+    &__btn {
+      width: 270px;
+      margin-bottom: 20px;
     }
 
     &__nav-link {
