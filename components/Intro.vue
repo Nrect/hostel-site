@@ -1,5 +1,5 @@
 <template lang="pug">
-  .intro(:class="{'intro--main' :this.$route.name.slice(0, -5) === 'index'}")
+  .intro(:class="getIntroCss")
     .rope-border
     .intro__wrapper
       .container
@@ -24,7 +24,12 @@ export default {
   },
   computed: {
     getPageName () {
-      const routeName = this.$route.name.slice(0, -5)
+      let routeName = ''
+      try {
+        routeName = this.$route.name.slice(0, -5)
+      } catch (e) {
+        return 'An error occurred'
+      }
       const routeParam = this.$route.params.id
       switch (routeName) {
         case 'index':
@@ -44,6 +49,9 @@ export default {
         default:
           return routeName
       }
+    },
+    getIntroCss () {
+      return this.$route.name.slice(0, -5) === 'index' ? 'intro--main' : ''
     }
   },
   methods: {
@@ -59,6 +67,8 @@ export default {
           return 'ОБЩАЯ 10 - МЕСТНая каюта'
         case 'twelve-room':
           return 'ОБЩая 12 - МЕСТНая каюта'
+        default:
+          return 'An error occurred'
       }
     },
     ...mapActions('layout', ['toggleBookingModal'])
