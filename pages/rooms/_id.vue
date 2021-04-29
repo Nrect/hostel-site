@@ -10,19 +10,19 @@
             hooper-navigation(slot="hooper-addons")
             hooper-pagination(slot="hooper-addons")
           .card-about__wrapper
-            h2.card-about__title {{room.title}}
+            h2.card-about__title {{room.title[actualLocale]}}
             .card-about__content
               ul.card-about__list
                 li.card-about__list-item(v-for="(advantage,idx) in room.advantages" :key="idx")
-                  span {{advantage}}
-              p.card-about__text(v-for="(content,idx) in room.additionContent" :key="idx") {{content}}
+                  span {{advantage[actualLocale]}}
+              p.card-about__text(v-for="(content,idx) in room.additionContent" :key="idx") {{content[actualLocale]}}
             .card-about__buttons
               span.card-about__btn.btn
                 nuxt-link(:to="localePath('/rooms')") {{translate.back}}
               span.card-about__btn.btn.btn--secondary
                 button(@click="toggleBookingModal") {{translate.booking}}
     .other-rooms
-      app-rooms-section(:title="'Другие каюты'")
+      app-rooms-section(:title="translateRooms")
 
 </template>
 
@@ -55,6 +55,12 @@ export default {
     },
     translate () {
       return this.$t('common')
+    },
+    translateRooms () {
+      return this.$t('roomsSection.titleCurrent')
+    },
+    actualLocale () {
+      return this.$i18n.locale
     }
   },
   mounted () {

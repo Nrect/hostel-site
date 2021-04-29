@@ -39,36 +39,6 @@ export default {
       content: 'Our team consists of young and responsive guys who are ready to help you spend a great time with us.'
     }
   },
-  faq: {
-    accordion1: {
-      title: 'Is it possible to bring children to the hostel?',
-      content: 'Staying at the hostel is possible with children from 7 years old, while they are accommodated in a separate bed.'
-    },
-    accordion2: {
-      title: 'Do you provide bed linen and towels?',
-      content: 'Bed linen and 2 towels for each guest are included in the price.'
-    },
-    accordion3: {
-      title: 'How often are rooms cleaned?',
-      content: 'Living rooms and common areas are cleaned daily. Scheduled bed linen change every 5 days.'
-    },
-    accordion4: {
-      title: 'Until what time can you check in?',
-      content: 'Check-in takes place from 2 pm. The reception is open around the clock.'
-    },
-    accordion5: {
-      title: 'Are pets allowed?',
-      content: 'Unfortunately, pets are not allowed.'
-    },
-    accordion6: {
-      title: 'Is there a safe in the hostel for the safety of valuables?',
-      content: 'Each multi-bed room has an individual locker (locker) with access by the guest\'s key card.'
-    },
-    accordion7: {
-      title: 'Can I check into the hostel at night?',
-      content: 'The hostel\'s reception is open around the clock, you can come to us at any time.'
-    }
-  },
   aboutUs: {
     title: 'HOSTEL PALMBURG – A QUIET HAVEN AWAY FROM THE HUSTLE AND BUSTLE OF THE CITY',
     content: [
@@ -135,5 +105,16 @@ export default {
     cosmetic: 'Cosmetic kits',
     hygien: 'Hygiene kits',
     grill: 'gas grill'
+  },
+  roomsSection: {
+    titleAll: 'Cabins',
+    titleCurrent: 'Other cabins'
+  },
+  roomsTitles: {
+    titleTwo: 'Double Cabin «STANDARD»',
+    titleSix: 'Shared 6-bed cabin',
+    titleEight: 'Women\'s 8-bed cabin',
+    titleTen: 'SHARED 10-BED cabin',
+    titleTwelve: 'Shared 12-bed cabin'
   }
 }
