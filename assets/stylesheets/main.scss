@@ -14,7 +14,8 @@
 @import 'layout/header',
 'layout/header-nav',
 'layout/mobile-menu',
-'layout/footer';
+'layout/footer',
+'layout/error';
 
 // Components
 @import 'components/intro',
@@ -24,6 +25,8 @@
 'components/burger-btn',
 'components/rooms-section',
 'components/room-card',
+'components/rooms-card',
+'components/rooms',
 'components/card-slider',
 'components/faq',
 'components/accordion',
@@ -34,4 +37,5 @@
 'components/quote',
 'components/other-rooms',
 'components/gallery',
-'components/services-cards';
+'components/services-cards',
+'components/booking-modal';

@@ -2,18 +2,22 @@
   .rooms_section
     .container
       .wrapper.wrapper--slider
-        h2.title Каюты
+        h2.title {{sectionTitle}}
         .card-slider
           hooper(ref="carousel" :settings="hooperSettings" @slide="checkSlideOption")
             slide(v-for="(room,idx) in rooms" :key="idx").card-slider__slide
               .room-card
                 .room-card__wrapper
                   .room-card__img
-                    img(:src="room.imgSrc")
-                  h3.room-card__title {{room.title}}
-                  .room-card__description {{room.content}}
+                    picture
+                      source(type="image/webp" :srcSet="room.imgSrc.webp.srcSet")
+                      source(type="image/avif" :srcSet="room.imgSrc.avif.srcSet")
+                      source(type="image/jpeg" :srcSet="room.imgSrc.jpg.srcSet")
+                      img(:src="room.imgSrc")
+                  h3.room-card__title {{room.title[actualLocale]}}
+                  .room-card__description {{room.content[actualLocale]}}
                   span.room-card__btn.btn
-                    nuxt-link(:to="'/rooms/'+ room.slug" ) Подробнее
+                    nuxt-link(:to="localePath('/rooms/'+ room.slug)" ) {{ translate.learnMore }}
         .card-slider__buttons
           button(@click.prevent="slidePrev" ref="prevBtn").card-slider__btn
             span
@@ -31,6 +35,16 @@ import { roomsData } from '~/content/rooms'
 
 export default {
   name: 'AppRoomsSection',
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    isFiltered: {
+      type: Boolean,
+      default: false
+    }
+  },
   data () {
     return {
       roomCards: [],
@@ -53,8 +67,18 @@ export default {
     }
   },
   computed: {
+    sectionTitle () {
+      return this.title
+    },
     rooms () {
-      return roomsData
+      const routeParam = this.$route.params.id ? this.$route.params.id : ''
+      return roomsData.filter(room => room.slug !== routeParam)
+    },
+    translate () {
+      return this.$t('common')
+    },
+    actualLocale () {
+      return this.$i18n.locale
     }
   },
   methods: {

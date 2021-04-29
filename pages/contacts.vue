@@ -16,20 +16,24 @@
               .card-about__contacts
                 .card-about__contact
                   svg.card-about__contact-icon
-                    use(xlink:href="#mobile-alt")
-                  a(href="tel:+79637384646") +7963 738 46 46 (вайбер, вотсап)
-                .card-about__contact
-                  svg.card-about__contact-icon
                     use(xlink:href="#phone")
-                  a(href="tel:+74012374646") +7 (4012) 37-46-46 (городской)
+                  a(href="tel:+74012374646") {{ translate.phone }}
                 .card-about__contact
                   svg.card-about__contact-icon
                     use(xlink:href="#envelop")
                   a(href="mailto:hostelpalmburg@gmail.com") hostelpalmburg@gmail.com
                 .card-about__contact
+                  a(href="viber://chat?number=%2B79637384646" target="_blank")
+                    svg.card-about__contact-icon
+                      use(xlink:href="#viber")
+                  a(href="https://wa.me/+79637384646" target="_blank")
+                    svg.card-about__contact-icon
+                      use(xlink:href="#whatsapp")
+                  p +7 (963) 738 46 46
+                .card-about__contact
                   svg.card-about__contact-icon
                     use(xlink:href="#map-marker")
-                  | Адрес : п. Прибрежное, ул. Южное полукольцо, 4
+                  | {{ translate.address }}
 </template>
 
 <script>
@@ -45,6 +49,11 @@ export default {
   data () {
     return {
       currentMap: 'google'
+    }
+  },
+  computed: {
+    translate () {
+      return this.$t('common')
     }
   }
 }
