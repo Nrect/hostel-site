@@ -20,7 +20,7 @@
             .aboutUs-section__card-title {{ translate.whyUs.card3.title }}
             .aboutUs-section__card-description {{ translate.whyUs.card3.content }}
         span.btn.btn--secondary.btn--section
-          nuxt-link(to="/about-us") {{ translate.common.showMore }}
+          nuxt-link(:to="localePath('/about-us')") {{ translate.common.showMore }}
 </template>
 
 <script>

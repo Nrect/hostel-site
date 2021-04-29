@@ -10,10 +10,10 @@
                 .room-card__wrapper
                   .room-card__img
                     img(:src="room.imgSrc")
-                  h3.room-card__title {{room.title}}
-                  .room-card__description {{room.content}}
+                  h3.room-card__title {{room.title[actualLocale]}}
+                  .room-card__description {{room.content[actualLocale]}}
                   span.room-card__btn.btn
-                    nuxt-link(:to="'/rooms/'+ room.slug" ) {{ translate.learnMore }}
+                    nuxt-link(:to="localePath('/rooms/'+ room.slug)" ) {{ translate.learnMore }}
         .card-slider__buttons
           button(@click.prevent="slidePrev" ref="prevBtn").card-slider__btn
             span
@@ -72,6 +72,9 @@ export default {
     },
     translate () {
       return this.$t('common')
+    },
+    actualLocale () {
+      return this.$i18n.locale
     }
   },
   methods: {

@@ -13,7 +13,7 @@
           h3.footer__title {{ translate.footer.navigation }}
           ul.footer__nav-list
             li(v-for='(link,index) in links' :key="index")
-              nuxt-link.footer__nav-link(:to="link.path" exact) {{link.name}}
+              nuxt-link.footer__nav-link(:to="localePath(link.path)" exact) {{link.name[actualLocale]}}
         .footer__contacts
           h3.footer__title {{ translate.footer.contacts }}
           .footer__contact
@@ -69,6 +69,9 @@ export default {
         footer: this.$t('footer'),
         common: this.$t('common')
       }
+    },
+    actualLocale () {
+      return this.$i18n.locale
     }
   },
   methods: { ...mapActions('layout', ['toggleBookingModal']) }

@@ -1,6 +1,6 @@
 <template lang="pug">
   .homepage
-    app-rooms-section(:title="'Каюты'")
+    app-rooms-section(:title="translate")
     app-about-us
     app-faq-section
 </template>
@@ -17,6 +17,14 @@ export default {
     AppAboutUs,
     AppRoomsSection,
     AppIntro
+  },
+  computed: {
+    translate () {
+      return this.$t('roomsSection.titleAll')
+    },
+    actualLocale () {
+      return this.$i18n.locale
+    }
   }
 }
 </script>

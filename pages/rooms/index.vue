@@ -13,11 +13,11 @@
               .rooms-card__img
                 img(:src="room.imgSrc")
               .rooms-card__wrapper
-                h3.rooms-card__title {{room.title}}
-                .rooms-card__description {{room.content}}
+                h3.rooms-card__title {{room.title[actualLocale]}}
+                .rooms-card__description {{room.content[actualLocale]}}
                 .rooms-card__buttons
                   span.rooms-card__btn.btn
-                    nuxt-link(:to="'/rooms/'+room.slug") {{ translate.learnMore }}
+                    nuxt-link(:to="localePath('/rooms/'+room.slug)") {{ translate.learnMore }}
                   span.rooms-card__btn.btn.btn--secondary
                     button(@click="toggleBookingModal") {{ translate.booking }}
 </template>
@@ -34,6 +34,9 @@ export default {
     },
     translate () {
       return this.$t('common')
+    },
+    actualLocale () {
+      return this.$i18n.locale
     }
   },
   methods: { ...mapActions('layout', ['toggleBookingModal']) }

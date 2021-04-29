@@ -1,31 +1,49 @@
 export const linksNav = [
   {
-    name: 'Главная',
+    name: {
+      ru: 'Главная',
+      en: 'Home'
+    },
     path: '/',
     exact: true
   },
   {
-    name: 'О нас',
+    name: {
+      ru: 'О нас',
+      en: 'About us'
+    },
     path: '/about-us',
     exact: true
   },
   {
-    name: 'Номера',
+    name: {
+      ru: 'Номера',
+      en: 'Rooms'
+    },
     path: '/rooms',
     exact: false
   },
   {
-    name: 'Услуги',
+    name: {
+      ru: 'Услуги',
+      en: 'Services'
+    },
     path: '/services',
     exact: true
   },
   {
-    name: 'FAQ',
+    name: {
+      ru: 'FAQ',
+      en: 'FAQ'
+    },
     path: '/faq',
     exact: true
   },
   {
-    name: 'Контакты',
+    name: {
+      ru: 'Контакты',
+      en: 'Contacts'
+    },
     path: '/contacts',
     exact: true
   }
