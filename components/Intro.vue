@@ -33,7 +33,6 @@ export default {
       } catch (e) {
         return 'An error has occurred'
       }
-      const routeParam = this.$route.params.id
       switch (routeName) {
         case 'index':
           return this.$t('introTitle.index')
@@ -109,6 +108,8 @@ export default {
             return 'intro--ten-room'
           case 'twelve-room':
             return 'intro--twelve-room'
+          default:
+            return 'intro--error-page'
         }
       }
     },
