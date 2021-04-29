@@ -23,10 +23,6 @@
                     use(xlink:href="#envelop")
                   a(href="mailto:hostelpalmburg@gmail.com") hostelpalmburg@gmail.com
                 .card-about__contact
-                  svg.card-about__contact-icon
-                    use(xlink:href="#map-marker")
-                  | {{ translate.address }}
-                .card-about__contact
                   a(href="viber://chat?number=%2B79637384646" target="_blank")
                     svg.card-about__contact-icon
                       use(xlink:href="#viber")
@@ -34,6 +30,10 @@
                     svg.card-about__contact-icon
                       use(xlink:href="#whatsapp")
                   p +7 (963) 738 46 46
+                .card-about__contact
+                  svg.card-about__contact-icon
+                    use(xlink:href="#map-marker")
+                  | {{ translate.address }}
 </template>
 
 <script>

@@ -46,7 +46,7 @@
     background-image: url("~assets/images/bg/bg10.jpg");
   }
 
-  &--contacts {
+  &--contacts, &--error-page {
     background-image: url("~assets/images/bg/bg1.jpg");
   }
 
@@ -153,7 +153,7 @@
   }
 
   &__btn {
-    z-index: 10;
+    z-index: 1;
     margin-top: 40px;
 
     button {
