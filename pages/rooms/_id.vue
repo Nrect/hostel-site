@@ -6,7 +6,11 @@
           hooper(ref="carousel" :settings="hooperSettings").card-about__slider
             slide.card-about__slide(v-for="(img,idx) in room.imageSet" :key="idx")
               .card-about__img
-                img(:src="img")
+                picture
+                  source(type="image/webp" :srcSet="img.webp.srcSet")
+                  source(type="image/avif" :srcSet="img.avif.srcSet")
+                  source(type="image/jpeg" :srcSet="img.jpg.srcSet")
+                  img(:src="img")
             hooper-navigation(slot="hooper-addons")
             hooper-pagination(slot="hooper-addons")
           .card-about__wrapper
